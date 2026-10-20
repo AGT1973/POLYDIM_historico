@@ -1,0 +1,1 @@
+{"name":"archivos_recientes","description":"Lista los N archivos modificados mas recientemente en un directorio","parameters":{"properties":{"directorio":{"title":"Directorio","type":"string"},"n":{"default":10,"title":"N","type":"integer"}},"required":["directorio"],"title":"archivos_recientesArguments","type":"object"}}

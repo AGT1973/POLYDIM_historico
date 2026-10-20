@@ -1,0 +1,1 @@
+{"name":"buscar_regex","description":"Busca archivos cuyo NOMBRE coincida con un patron Regex","parameters":{"properties":{"directorio":{"title":"Directorio","type":"string"},"patron":{"title":"Patron","type":"string"}},"required":["directorio","patron"],"title":"buscar_regexArguments","type":"object"}}

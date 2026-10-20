@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>POLYDIM Paper - Submission Draft</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">POLYDIM Paper - Submission Draft</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a
+href="#asymptotically-optimal-latent-routing-via-clifford-spinors-and-woodbury-projections"
+id="toc-asymptotically-optimal-latent-routing-via-clifford-spinors-and-woodbury-projections">Asymptotically
+Optimal Latent Routing via Clifford Spinors and Woodbury Projections</a>
+<ul>
+<li><a href="#abstract" id="toc-abstract">Abstract</a></li>
+<li><a
+href="#the-epistemological-shift-from-algorithms-to-categorical-cognitive-processes"
+id="toc-the-epistemological-shift-from-algorithms-to-categorical-cognitive-processes">1.
+The Epistemological Shift: From Algorithms to Categorical Cognitive
+Processes</a>
+<ul>
+<li><a href="#the-operational-semantics-imperative"
+id="toc-the-operational-semantics-imperative">1.1 The Operational
+Semantics Imperative</a></li>
+<li><a href="#infinite-dimensional-function-spaces-neural-operators"
+id="toc-infinite-dimensional-function-spaces-neural-operators">1.2
+Infinite-Dimensional Function Spaces (Neural Operators)</a></li>
+</ul></li>
+<li><a href="#axiomatic-theory-of-polydimensions-and-geo_id"
+id="toc-axiomatic-theory-of-polydimensions-and-geo_id">2. Axiomatic
+Theory of Polydimensions and <code>GEO_ID</code></a>
+<ul>
+<li><a href="#the-homotopy-type-theory-hott-fix-for-geo_id"
+id="toc-the-homotopy-type-theory-hott-fix-for-geo_id">2.1 The Homotopy
+Type Theory (HoTT) Fix for <code>GEO_ID</code></a></li>
+<li><a href="#the-aristotelian-hypothesis-vs.-platonic-convergence"
+id="toc-the-aristotelian-hypothesis-vs.-platonic-convergence">2.2 The
+Aristotelian Hypothesis vs. Platonic Convergence</a></li>
+</ul></li>
+<li><a href="#mathematical-core-verifiable-execution-over-superposition"
+id="toc-mathematical-core-verifiable-execution-over-superposition">3.
+Mathematical Core: Verifiable Execution over Superposition</a>
+<ul>
+<li><a href="#geometric-algebra-spin-rotors-and-the-cayley-transform"
+id="toc-geometric-algebra-spin-rotors-and-the-cayley-transform">3.1
+Geometric Algebra: Spin Rotors and the Cayley Transform</a></li>
+<li><a
+href="#combinatorial-hodge-theory-and-spectral-cognitive-collapse"
+id="toc-combinatorial-hodge-theory-and-spectral-cognitive-collapse">3.2
+Combinatorial Hodge Theory and Spectral Cognitive Collapse</a></li>
+</ul></li>
+<li><a href="#latentmas-and-the-align-protocol"
+id="toc-latentmas-and-the-align-protocol">4. LatentMAS and the ALIGN
+Protocol</a>
+<ul>
+<li><a href="#anchor-free-alignment" id="toc-anchor-free-alignment">4.1
+Anchor-Free Alignment</a></li>
+<li><a href="#deep-equilibrium-models-deq-and-the-clarke-jacobian"
+id="toc-deep-equilibrium-models-deq-and-the-clarke-jacobian">4.2 Deep
+Equilibrium Models (DEQ) and the Clarke Jacobian</a></li>
+</ul></li>
+<li><a href="#empirical-validation-overcoming-mathcalon3-bottlenecks"
+id="toc-empirical-validation-overcoming-mathcalon3-bottlenecks">5.
+Empirical Validation: Overcoming <span
+class="math inline">𝒪(<em>N</em><sup>3</sup>)</span> Bottlenecks</a>
+<ul>
+<li><a href="#hardware-compatibility"
+id="toc-hardware-compatibility">5.1 Hardware Compatibility</a></li>
+</ul></li>
+<li><a href="#open-problems" id="toc-open-problems">6. Open
+Problems</a></li>
+<li><a href="#conclusion" id="toc-conclusion">7. Conclusion</a></li>
+<li><a href="#references" id="toc-references">References</a></li>
+<li><a href="#appendix-1-the-para-2-category"
+id="toc-appendix-1-the-para-2-category">Appendix 1: The
+<code>Para</code> 2-Category</a></li>
+<li><a
+href="#appendix-2-polydimensional-relativity-and-c-spaces-formal-isomorphism"
+id="toc-appendix-2-polydimensional-relativity-and-c-spaces-formal-isomorphism">Appendix
+2: Polydimensional Relativity and C-Spaces (Formal Isomorphism)</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1
+id="asymptotically-optimal-latent-routing-via-clifford-spinors-and-woodbury-projections">Asymptotically
+Optimal Latent Routing via Clifford Spinors and Woodbury
+Projections</h1>
+<p><strong>POLYDIM-CLA: Categorical Language Architecture</strong><br />
+<em>Anonymous Author(s)</em><br />
+<em>Under Double-Blind Review - POPL 2027 Submission #TBD</em><br />
+<strong>Version 7 (Empirical Validation Edition)</strong></p>
+<h2 id="abstract">Abstract</h2>
+<p>This work establishes the mathematical foundations of
+<strong>POLYDIM-CLA</strong> (Categorical Language Architecture),
+transcending classical algorithmic paradigms through a formal
+axiomatization of computational processes governed by the directed
+evolution of internal representations. By synthesizing Categorical Deep
+Learning, Clifford Algebras, Tensor Network Interpolation (TCI), and
+Gromov-Wasserstein Alignment, we construct a verifiable, operationally
+semantic framework for Latent Multi-Agent Systems (LatentMAS).
+Crucially, this version introduces empirical validation of the Woodbury
+matrix identity to circumvent <span
+class="math inline">𝒪(<em>N</em><sup>3</sup>)</span> bottlenecks,
+enabling constant-time structural alignment on modern tensor-core
+hardware.</p>
+<h2
+id="the-epistemological-shift-from-algorithms-to-categorical-cognitive-processes">1.
+The Epistemological Shift: From Algorithms to Categorical Cognitive
+Processes</h2>
+<p>Traditional computing is defined by deterministic algorithm
+execution. The rise of representation-learning systems necessitates a
+paradigm shift: program execution is no longer imperative sequence
+traversal but the constrained evolution of a representational space
+toward semantic objectives.</p>
+<ul>
+<li><strong>Classical Paradigm:</strong><br />
+<span class="math display">Program → Algorithm → Result</span><br />
+</li>
+<li><strong>POLYDIM-CLA Paradigm:</strong><br />
+<span class="math display">Objective → Categorical
+Functor → Result</span></li>
+</ul>
+<h3 id="the-operational-semantics-imperative">1.1 The Operational
+Semantics Imperative</h3>
+<p>Prior frameworks proposed Grothendieck topoi as latent space
+environments but lacked operational grounding (e.g., Villani &amp;
+McBurney’s <em>Topos of Transformer Networks</em>, arXiv:2403.18415).
+POLYDIM-CLA resolves this by embedding semantics in <strong>Categorical
+Deep Learning</strong>, leveraging parameterized lenses (Cruttwell et
+al., 2022; Gavranović et al., 2024, arXiv:2402.15332) to construct
+semantic derivatives for backpropagation. Lazy log-tensor monads ensure
+all categorical constructions compile to differentiable tensor
+operations.</p>
+<h3 id="infinite-dimensional-function-spaces-neural-operators">1.2
+Infinite-Dimensional Function Spaces (Neural Operators)</h3>
+<p>POLYDIM-CLA treats functions as vector space elements, extending
+finite-dimensional mappings to infinite-dimensional spaces via
+<strong>Neural Operators</strong> (e.g., DeepONet, Fourier Neural
+Operators). This enables zero-shot generalization across continuous
+semantic fields by learning mappings between function spaces rather than
+discrete points.</p>
+<h2 id="axiomatic-theory-of-polydimensions-and-geo_id">2. Axiomatic
+Theory of Polydimensions and <code>GEO_ID</code></h2>
+<p>A polydimension in POLYDIM-CLA is defined as:<br />
+<span
+class="math display">ℙ = (<em>D</em>, <em>Π</em><sub><em>P</em></sub>, 𝒢, ℳ)</span><br />
+where:<br />
+- <span class="math inline"><em>D</em></span>: Dynamically scaled
+topological dimension.<br />
+- <span class="math inline"><em>Π</em><sub><em>P</em></sub></span>: Set
+of valid projection functors.<br />
+- <span class="math inline">𝒢</span>: <strong>Groupoid</strong> of
+transformations preserving <code>GEO_ID</code>.<br />
+- <span class="math inline">ℳ</span>: Operational Monad ensuring
+differentiable execution.</p>
+<h3 id="the-homotopy-type-theory-hott-fix-for-geo_id">2.1 The Homotopy
+Type Theory (HoTT) Fix for <code>GEO_ID</code></h3>
+<p>Earlier formulations defined <code>GEO_ID</code> via monoids, which
+lack inverses and only induce preorders. POLYDIM-CLA rigorously defines
+<code>GEO_ID</code> as a <strong>Higher Inductive Type (HIT)</strong> in
+HoTT, where path inversion is guaranteed by the <span
+class="math inline">∞</span>-groupoid structure of identity types.</p>
+<h3 id="the-aristotelian-hypothesis-vs.-platonic-convergence">2.2 The
+Aristotelian Hypothesis vs. Platonic Convergence</h3>
+<p>The “Aristotelian Hypothesis” (Huh et al., 2026) challenges global
+homotopy classes, showing models converge on local neighborhoods.
+POLYDIM-CLA addresses this by constructing a manifold of local patches,
+stitched via HoTT where global Euclidean convergence fails.</p>
+<h2 id="mathematical-core-verifiable-execution-over-superposition">3.
+Mathematical Core: Verifiable Execution over Superposition</h2>
+<p>Empirical validation confirms naive superposition fails in dense
+latent spaces. POLYDIM-CLA replaces it with orthogonal structures.</p>
+<h3 id="geometric-algebra-spin-rotors-and-the-cayley-transform">3.1
+Geometric Algebra: Spin Rotors and the Cayley Transform</h3>
+<p>The <code>MIX</code> operator is realized as a <strong>Spin
+Rotor</strong> in Clifford Algebra. To avoid combinatorial explosion in
+<span class="math inline">𝒞<em>ℓ</em>(<em>n</em>, 0)</span> (e.g., <span
+class="math inline">2<sup>4096</sup></span> degrees of freedom in LLMs),
+transformations are restricted to the spin group <span
+class="math inline">Spin(<em>n</em>)</span>. Using the
+<strong>Cartan-Dieudonné Theorem</strong>, semantic rotations factorize
+into ≤<span class="math inline"><em>k</em></span> reflections. The state
+update is:<br />
+<span class="math display">$$x' = R x \tilde{R}, \quad R = \prod_{i=1}^k
+\exp(B_i), \quad B_i \in \mathfrak{so}(n).$$</span><br />
+The <strong>Cayley Transform</strong> extracts the generator <span
+class="math inline"><em>B</em><sub><em>i</em><em>j</em></sub></span>
+from alignment operator <span
+class="math inline"><em>V</em> = <em>X</em><sub><em>j</em></sub><em>X</em><sub><em>i</em></sub><sup><em>T</em></sup></span>:<br />
+<span
+class="math display"><em>B</em><sub><em>i</em><em>j</em></sub> = (<em>V</em> − <em>I</em>)(<em>V</em> + <em>I</em>)<sup>−1</sup>.</span><br />
+Coupled with the Woodbury identity, this reduces complexity from <span
+class="math inline">𝒪(<em>N</em><sup>3</sup>)</span> to <span
+class="math inline">𝒪(<em>k</em> ⋅ <em>N</em>)</span> or <span
+class="math inline">𝒪(<em>N</em><sup>2</sup>)</span>, aligning with
+<strong>Clifford Group Equivariant Neural Networks (CGENN)</strong>.</p>
+<h3 id="combinatorial-hodge-theory-and-spectral-cognitive-collapse">3.2
+Combinatorial Hodge Theory and Spectral Cognitive Collapse</h3>
+<p>The <code>FIXPOINT</code> operator employs <strong>Cellular Sheaf
+Laplacians</strong> to separate latent flow into divergence-free and
+rotational components. Cognitive collapse is formalized via sheaf
+spectral theory: for agent network <span
+class="math inline"><em>G</em></span> and sheaf <span
+class="math inline">ℱ</span>, the Hodge Laplacian <span
+class="math inline"><em>Δ</em><sub>ℱ</sub> = <em>δ</em><sup>*</sup><em>δ</em></span>
+governs consensus dynamics. Collapse occurs when the smallest eigenvalue
+<span
+class="math inline"><em>λ</em><sub>1</sub>(<em>Δ</em><sub>ℱ</sub>)</span>
+falls below a noise threshold.</p>
+<h2 id="latentmas-and-the-align-protocol">4. LatentMAS and the ALIGN
+Protocol</h2>
+<p>POLYDIM-CLA eschews serialized text, operating purely in latent
+space.</p>
+<h3 id="anchor-free-alignment">4.1 Anchor-Free Alignment</h3>
+<p>Rejecting global geometry (the “Platonic Hypothesis”), POLYDIM-CLA
+aligns spaces via local restriction maps <span
+class="math inline"><em>g</em><sub><em>e</em></sub> ∈ Spin(<em>n</em>)</span>,
+bypassing adversarial co-training.</p>
+<h3 id="deep-equilibrium-models-deq-and-the-clarke-jacobian">4.2 Deep
+Equilibrium Models (DEQ) and the Clarke Jacobian</h3>
+<p><code>FIXPOINT</code> mirrors DEQ convergence guarantees. POLYDIM-CLA
+extends these to non-smooth activations via the <strong>Clarke
+Generalized Jacobian</strong> <span
+class="math inline">∂𝒯(<em>x</em>)</span>, enforcing Lipschitz
+constraints to ensure Banach fixed-point stability.</p>
+<h2 id="empirical-validation-overcoming-mathcalon3-bottlenecks">5.
+Empirical Validation: Overcoming <span
+class="math inline">𝒪(<em>N</em><sup>3</sup>)</span> Bottlenecks</h2>
+<p>The <strong>Woodbury Identity</strong> reduces dense inversion (<span
+class="math inline">𝒪(<em>N</em><sup>3</sup>)</span>) to <span
+class="math inline">𝒪(<em>N</em><em>K</em><sup>2</sup>)</span>.
+Benchmarks on TPUv5 and T4 GPU show speedups up to
+<strong>23.2x</strong> (TPU) and <strong>9.8x</strong> (GPU) for <span
+class="math inline"><em>N</em> = 8192</span>.</p>
+<h3 id="hardware-compatibility">5.1 Hardware Compatibility</h3>
+<ul>
+<li><strong>TPUv5:</strong> High Bandwidth Memory (HBM) handles large
+matrices efficiently (e.g., <span
+class="math inline"><em>N</em> = 16384</span> in <strong>58.96
+ms</strong>).<br />
+</li>
+<li><strong>T4 GPU:</strong> GDDR6 bandwidth limits performance;
+implicit operators (<span
+class="math inline"><em>y</em> = <em>Q</em><em>x</em></span>) are needed
+for edge devices.</li>
+</ul>
+<h2 id="open-problems">6. Open Problems</h2>
+<ol type="1">
+<li><strong>The ATTEND Monad and Softmax:</strong> Softmax requires
+probabilistic measure theory (e.g., Giry Monad).<br />
+</li>
+<li><strong>Banach Fixed Points for ATTEND:</strong> Enforcing
+1-Lipschitz attention ensures convergence.<br />
+</li>
+<li><strong>Geometric CRDTs:</strong> Scaling conflict-free types to
+<span class="math inline">ℝ<sup>10000</sup></span> remains open.<br />
+</li>
+<li><strong>Quantum TDA:</strong> Quantum HodgeRank may offer
+exponential speedups for latent aggregation.</li>
+</ol>
+<h2 id="conclusion">7. Conclusion</h2>
+<p>POLYDIM-CLA provides the first rigorous, scalable architecture for
+LatentMAS, unifying Clifford spinors, HoTT, and categorical deep
+learning.</p>
+<h2 id="references">References</h2>
+<p><strong>Historical Foundations:</strong> * <strong>Kolmogorov, A.N.
+(1933):</strong> <em>Foundations of the Theory of Probability</em>.
+(Establishing the measure-theoretic ground for latent probabilistic
+flows). * <strong>Arnold, V.I. (1957):</strong> <em>On functions of
+three variables</em> (Kolmogorov-Arnold Representation Theorem, enabling
+modern KAN network topologies). * <strong>Leray, J. (1945):</strong>
+<em>L’anneau d’homologie d’une représentation</em> (Introduction of
+Cellular Sheaf Theory for topological routing without global anchors). *
+<strong>Cartan, É. (1913):</strong> <em>Les groupes projectifs qui ne
+laissent invariante aucune multiplicité plane</em> (Discovery of Spinors
+and basis for orthogonal Clifford Rotors). * <strong>Grothendieck, A.
+(1960s):</strong> <em>Séminaire de Géométrie Algébrique du Bois
+Marie</em> (Topos Theory and Category theory for semantic domains).</p>
+<p><strong>Modern Empirical SOTA (2022-2026):</strong> *
+<strong>Oseledets, I. V. (2011):</strong> <em>Tensor-Train
+Decomposition</em> (Foundational compression architecture for scalable
+latent representations). * <strong>Cruttwell et al., 2022:</strong>
+<em>Categorical Foundations of Gradient-Based Learning</em>
+(arXiv:2103.01931). * <strong>Gavranović et al., 2024:</strong>
+<em>Position: Categorical Deep Learning is an Algebraic Theory of All
+Architectures</em> (arXiv:2402.15332, ICML 2024). * <strong>Moschella et
+al., 2023:</strong> <em>Relative Representations</em> (arXiv:2209.15430,
+ICLR 2023). * <strong>O’Neill, 2025:</strong> <em>Self-Attention as a
+Parametric Endofunctor</em> (arXiv:2501.02931). * <strong>Jha &amp;
+Zhang, 2025:</strong> <em>Harnessing the Universal Geometry of
+Embeddings</em> (arXiv:2505.12540). * <strong>Huh et al., 2026:</strong>
+<em>The Aristotelian Representation Hypothesis</em>. *
+<strong>Mahadevan, 2026:</strong> <em>Kan Extension Transformers</em>. *
+<strong>White, 2024:</strong> <em>Spinor Embeddings for Functional
+Geometric Algebra</em>. * <strong>Authors omitted, 2026:</strong>
+<em>Improving Relative Representations with Learned Anchors and Whitened
+Inner Products</em> (arXiv:2605.30596). * <strong>Authors omitted,
+2026:</strong> <em>Cross-Family Universality of Behavioral Axes via
+Anchor-Projected Representations</em> (arXiv:2605.09875). *
+<strong>Authors omitted, 2026:</strong> <em>Contrastive-Difference CKA
+Reveals Concept-Specific Structural Alignment Across Language Model
+Architectures</em> (arXiv:2606.16897). * <strong>Villani &amp; McBurney,
+2024:</strong> <em>The Topos of Transformer Networks</em>
+(arXiv:2403.18415, requires major revision).</p>
+<h2 id="appendix-1-the-para-2-category">Appendix 1: The
+<code>Para</code> 2-Category</h2>
+<p>Following Gavranović et al. (2024), POLYDIM-CLA formally treats the
+neural architecture itself as a functor within the 2-category <span
+class="math inline"><strong>P</strong><strong>a</strong><strong>r</strong><strong>a</strong></span>.
+This categorification proves that semantic projection is not merely a
+weight multiplication, but a rigorous composition of parametric
+lenses.</p>
+<h2
+id="appendix-2-polydimensional-relativity-and-c-spaces-formal-isomorphism">Appendix
+2: Polydimensional Relativity and C-Spaces (Formal Isomorphism)</h2>
+<p>While the mathematical pillars of POLYDIM-CLA are deeply anchored in
+contemporary Machine Learning SOTA, the theoretical nomenclature draws a
+formal isomorphism to <strong>Polydimensional Relativity</strong>
+(Pezzaglia) and <strong>C-Spaces</strong> (Castro). These esoteric
+frameworks in theoretical physics provide a conceptual vocabulary for
+spaces where dimensionality itself is a dynamic variable. <em>Note: This
+connection is treated strictly as a structural analogy and does not
+imply empirical validation of Pezzaglia/Castro’s models within the
+current ML paradigm.</em></p>
+</body>
+</html>

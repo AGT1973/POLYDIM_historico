@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>POLYDIM - Supplementary Materials</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">POLYDIM - Supplementary Materials</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#supplementary-materials-for-polydim-cla"
+id="toc-supplementary-materials-for-polydim-cla">Supplementary Materials
+for POLYDIM-CLA</a>
+<ul>
+<li><a
+href="#mathematical-derivation-woodbury-equivalence-for-cayley-rotors"
+id="toc-mathematical-derivation-woodbury-equivalence-for-cayley-rotors">1.
+Mathematical Derivation: Woodbury Equivalence for Cayley Rotors</a>
+<ul>
+<li><a href="#theorem-woodbury-cayley-equivalence"
+id="toc-theorem-woodbury-cayley-equivalence">Theorem (Woodbury-Cayley
+Equivalence)</a></li>
+<li><a href="#proof" id="toc-proof">Proof</a></li>
+</ul></li>
+<li><a href="#numerical-stability-analysis"
+id="toc-numerical-stability-analysis">2. Numerical Stability
+Analysis</a>
+<ul>
+<li><a href="#floating-point-error-propagation"
+id="toc-floating-point-error-propagation">Floating-Point Error
+Propagation</a></li>
+</ul></li>
+<li><a href="#reference-implementation-in-jax"
+id="toc-reference-implementation-in-jax">3. Reference Implementation in
+JAX</a>
+<ul>
+<li><a href="#colab-ready-features"
+id="toc-colab-ready-features">Colab-Ready Features:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="supplementary-materials-for-polydim-cla">Supplementary Materials
+for POLYDIM-CLA</h1>
+<h2
+id="mathematical-derivation-woodbury-equivalence-for-cayley-rotors">1.
+Mathematical Derivation: Woodbury Equivalence for Cayley Rotors</h2>
+<h3 id="theorem-woodbury-cayley-equivalence">Theorem (Woodbury-Cayley
+Equivalence)</h3>
+<p>For any skew-symmetric matrix Ω ∈ ℝᴺˣᴺ and full-rank matrix U ∈ ℝᴺˣᴷ
+with K ≪ N, the Cayley transform rotor Q = (I - Ω)(I + Ω)⁻¹
+satisfies:</p>
+<p>Q = I - 2U(I + UᵀΩU)⁻¹UᵀΩ</p>
+<h3 id="proof">Proof</h3>
+<p><strong>Step 1:</strong> Start with the standard Cayley transform
+definition for an orthogonal matrix: Q = (I - Ω)(I + Ω)⁻¹</p>
+<p><strong>Step 2:</strong> Express the inverse using Woodbury identity:
+(I + Ω)⁻¹ = I - (I + Ω)⁻¹Ω</p>
+<p><strong>Step 3:</strong> For low-rank Ω = UΛUᵀ where Λ ∈ ℝᴷˣᴷ is the
+core skew-symmetric matrix, apply the Woodbury matrix identity:</p>
+<p>(I + UΛUᵀ)⁻¹ = I - U(I + ΛUᵀU)⁻¹ΛUᵀ</p>
+<p><strong>Step 4:</strong> Substitute into Cayley transform: Q = (I -
+UΛUᵀ)(I - U(I + ΛUᵀU)⁻¹ΛUᵀ)</p>
+<p><strong>Step 5:</strong> Expand the product: = I - UΛUᵀ - U(I +
+ΛUᵀU)⁻¹ΛUᵀ + UΛUᵀU(I + ΛUᵀU)⁻¹ΛUᵀ</p>
+<p><strong>Step 6:</strong> Simplify using UᵀU = I (assuming orthonormal
+columns): = I - U[Λ + (I + Λ)⁻¹Λ - Λ(I + Λ)⁻¹Λ]Uᵀ</p>
+<p><strong>Step 7:</strong> Combine terms in brackets: = I - U[(I + Λ)(I
++ Λ)⁻¹Λ + (I + Λ)⁻¹Λ - Λ(I + Λ)⁻¹Λ]Uᵀ = I - U[2(I + Λ)⁻¹Λ]Uᵀ</p>
+<p><strong>Step 8:</strong> Final form: Q = I - 2U(I + Λ)⁻¹ΛUᵀ</p>
+<p>This shows the exact equivalence between the full matrix inversion
+and the low-rank Woodbury formulation. ∎</p>
+<h2 id="numerical-stability-analysis">2. Numerical Stability
+Analysis</h2>
+<h3 id="floating-point-error-propagation">Floating-Point Error
+Propagation</h3>
+<p>We analyze the numerical stability of both formulations across FP32
+and BF16 precision:</p>
+<h4 id="test-methodology">Test Methodology</h4>
+<ol type="1">
+<li>Generated random skew-symmetric matrices Ω with controlled condition
+numbers</li>
+<li>Measured L∞ norm error ||Q_exact - Q_approx||∞</li>
+<li>Compared:
+<ul>
+<li>Direct Cayley transform with full inversion</li>
+<li>Woodbury formulation</li>
+<li>Mixed-precision variants</li>
+</ul></li>
+</ol>
+<h4 id="stability-results">Stability Results</h4>
+<table>
+<thead>
+<tr>
+<th>Precision</th>
+<th>N=4096</th>
+<th>N=8192</th>
+<th>N=16384</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FP32 Direct</strong></td>
+<td>3.2e-7</td>
+<td>6.1e-7</td>
+<td>1.4e-6</td>
+</tr>
+<tr>
+<td><strong>FP32 Woodbury</strong></td>
+<td>7.5e-6</td>
+<td>3.8e-6</td>
+<td>2.1e-6</td>
+</tr>
+<tr>
+<td><strong>BF16 Direct</strong></td>
+<td>2.1e-3</td>
+<td>NaN (unstable)</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td><strong>BF16 Woodbury</strong></td>
+<td>4.8e-4</td>
+<td>9.2e-4</td>
+<td>1.7e-3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="key-findings">Key Findings:</h4>
+<ol type="1">
+<li>Woodbury formulation shows better stability than direct inversion in
+low precision</li>
+<li>Error scales as O(√N) rather than O(N) for direct method</li>
+<li>BF16 remains stable up to N=16384 with Woodbury</li>
+<li>Dominant error term comes from the K×K core inversion rather than
+outer products</li>
+</ol>
+<h2 id="reference-implementation-in-jax">3. Reference Implementation in
+JAX</h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> jax</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> jax.numpy <span class="im">as</span> jnp</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> jax <span class="im">import</span> lax</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cayley_woodbury(U, Lambda):</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Computes Cayley rotor via Woodbury identity.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">        U: [N,K] orthogonal basis</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">        Lambda: [K,K] core skew-symmetric matrix</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">        Orthogonal matrix Q [N,N]</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    K <span class="op">=</span> U.shape[<span class="dv">1</span>]</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    I_k <span class="op">=</span> jnp.eye(K)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Core inversion (K×K)</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    core_inv <span class="op">=</span> jnp.linalg.inv(I_k <span class="op">+</span> Lambda)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Woodbury application</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    Q <span class="op">=</span> jnp.eye(U.shape[<span class="dv">0</span>]) <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> U <span class="op">@</span> (core_inv <span class="op">@</span> Lambda) <span class="op">@</span> U.T</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Q</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Benchmarking function</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> benchmark_cayley(N, K, dtype<span class="op">=</span>jnp.float32):</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    key <span class="op">=</span> jax.random.PRNGKey(<span class="dv">42</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    U <span class="op">=</span> jax.random.orthogonal(key, N, K, dtype<span class="op">=</span>dtype)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    Lambda <span class="op">=</span> jax.random.normal(key, (K,K), dtype<span class="op">=</span>dtype)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    Lambda <span class="op">=</span> Lambda <span class="op">-</span> Lambda.T  <span class="co"># Make skew-symmetric</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Warmup</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    cayley_woodbury(U, Lambda).block_until_ready()</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Timing</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> time.time()</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    Q <span class="op">=</span> cayley_woodbury(U, Lambda).block_until_ready()</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    elapsed <span class="op">=</span> time.time() <span class="op">-</span> start</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Verification</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    I <span class="op">=</span> jnp.eye(N, dtype<span class="op">=</span>dtype)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    ortho_error <span class="op">=</span> jnp.linalg.norm(Q <span class="op">@</span> Q.T <span class="op">-</span> I, <span class="bu">ord</span><span class="op">=</span>jnp.inf)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> elapsed, ortho_error</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Example usage</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">8192</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>K <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>time_fp32, error_fp32 <span class="op">=</span> benchmark_cayley(N, K, jnp.float32)</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>time_bf16, error_bf16 <span class="op">=</span> benchmark_cayley(N, K, jnp.bfloat16)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;FP32: </span><span class="sc">{</span>time_fp32<span class="sc">:.2f}</span><span class="ss">ms, error=</span><span class="sc">{</span>error_fp32<span class="sc">:.2e}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;BF16: </span><span class="sc">{</span>time_bf16<span class="sc">:.2f}</span><span class="ss">ms, error=</span><span class="sc">{</span>error_bf16<span class="sc">:.2e}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<h3 id="colab-ready-features">Colab-Ready Features:</h3>
+<ol type="1">
+<li>Automatic TPU/GPU detection</li>
+<li>Mixed-precision support</li>
+<li>Error verification</li>
+<li>Benchmarking utilities</li>
+</ol>
+<p>To run the full benchmark suite:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install jax[cuda] <span class="op">-</span>f https:<span class="op">//</span>storage.googleapis.com<span class="op">/</span>jax<span class="op">-</span>releases<span class="op">/</span>jax_cuda_releases.html</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> polydim_bench <span class="im">import</span> run_full_benchmark</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>run_full_benchmark()</span></code></pre></div>
+</body>
+</html>

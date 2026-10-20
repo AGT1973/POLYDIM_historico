@@ -1,0 +1,1 @@
+{"name":"eliminar_archivo","description":"Elimina un archivo del sistema","parameters":{"properties":{"ruta":{"title":"Ruta","type":"string"}},"required":["ruta"],"title":"eliminar_archivoArguments","type":"object"}}

@@ -1,0 +1,10 @@
+*.gdoc
+*.gsheet
+*.gslides
+desktop.ini
+target/
+__pycache__/
+*.pyc
+*.tmp
+*.zip
+*.safetensors

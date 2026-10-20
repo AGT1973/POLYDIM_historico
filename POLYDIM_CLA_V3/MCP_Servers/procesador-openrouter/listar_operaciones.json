@@ -1,0 +1,1 @@
+{"name":"listar_operaciones","description":"Lista todas las operaciones del dispatcher perezoso, por categoria.","parameters":{"properties":{"categoria":{"default":"","title":"Categoria","type":"string"}},"title":"listar_operacionesArguments","type":"object"}}

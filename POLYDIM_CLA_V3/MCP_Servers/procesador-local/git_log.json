@@ -1,0 +1,1 @@
+{"name":"git_log","description":"Muestra el historial de commits (hash, fecha, autor, mensaje)","parameters":{"properties":{"directorio":{"title":"Directorio","type":"string"},"n":{"default":15,"title":"N","type":"integer"}},"required":["directorio"],"title":"git_logArguments","type":"object"}}

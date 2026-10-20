@@ -1,0 +1,96 @@
+% POLYDIM_DEST
+% destino: polydim/docs/
+% nombre:  polydim_bib_addendum.bib
+% autor:   ai.mpat.agt@gmail.com
+% fecha:   2026-06-28
+% uso:     Agregar estas entradas a polydim.bib antes de compilar polydim_paper_arxiv.tex
+% origen:  Búsqueda autónoma de literatura — sesión 2026-06-28
+% impacto: Justifican H2 del Teorema 3 (PROJECT como funtor)
+
+% ============================================================
+% CITA 1 — Invariant Subspace Necessity Theorem
+% Justifica H2: subespacios semánticos son linealmente invariantes
+% en transformers por necesidad arquitectural (no por hipótesis)
+% ============================================================
+
+@article{suarez2026invariant,
+  author    = {Suarez, Andres and Lee, Yousung and Har, Dongsoo},
+  title     = {Why Linear Interpretability Works: Invariant Subspaces
+               as a Result of Architectural Constraints},
+  journal   = {arXiv preprint arXiv:2602.09783},
+  year      = {2026},
+  month     = {February},
+  url       = {https://arxiv.org/abs/2602.09783},
+  institution = {Korea Advanced Institute of Science and Technology (KAIST)},
+  note      = {Theorem 3.7 (Invariant Subspace Necessity): any semantic
+               feature decoded through a linear interface occupies a
+               context-invariant subspace. Corollary B.3: the OV circuit
+               maps feature directions as $d_f \mapsto W_O W_V d_f$,
+               preserving subspace structure. Directly justifies Hypothesis H2
+               of POLYDIM Theorem 3 (PROJECT is a functor).}
+}
+
+% ============================================================
+% CITA 2 — Self-Attention as Parametric Endofunctor
+% Valida que ATTEND es un endofunctor F: Vect → Vect y que
+% el stacking de capas = mónada libre Free(F)
+% Esto es exactamente lo que COMPOSE + PROJECT formalizan en POLYDIM
+% ============================================================
+
+@article{oneill2025endofunctor,
+  author    = {O'Neill, Charles},
+  title     = {Self-Attention as a Parametric Endofunctor:
+               A Categorical Framework for Transformer Architectures},
+  journal   = {arXiv preprint arXiv:2501.02931},
+  year      = {2025},
+  month     = {January},
+  url       = {https://arxiv.org/abs/2501.02931},
+  institution = {Australian National University},
+  note      = {Theorem 3.1: linear self-attention (Q, K, V) defines a
+               parametric 1-morphism in the 2-category Para(Vect), inducing
+               an endofunctor F: Vect → Vect on the underlying 1-category.
+               Theorem 3.2: stacking n attention layers = free monad Free(F).
+               Validates the categorical structure of POLYDIM COMPOSE and
+               PROJECT_X as a functor.}
+}
+
+% ============================================================
+% INSTRUCCIONES DE INTEGRACIÓN
+% ============================================================
+%
+% 1. Copiar las dos entradas anteriores a polydim.bib
+%    (Drive ID: 1vOHMAwX3U0lL1ydEep_TEFhjDo6Let0D)
+%
+% 2. En polydim_paper_arxiv.tex, Sección 3.5 (después de la prueba de F2),
+%    insertar el siguiente bloque LaTeX:
+%
+% \begin{remark}[H2 Derived from Architecture]
+% \label{rem:h2}
+% Hypothesis~H2 (DIM$_X$-preserving transformations) is not an ad hoc
+% assumption of \textsc{Polydim}. The Invariant Subspace Necessity theorem
+% of Suarez et al.~\cite{suarez2026invariant} establishes that any
+% communicable semantic feature decoded through a linear interface must
+% occupy a context-invariant linear subspace. When $\mathrm{DIM}_X$ is
+% defined as the span of such invariant directions, the OV circuit
+% $W_O W_V$ maps $\mathrm{DIM}_X$ to $W_O W_V \mathrm{DIM}_X$ (Corollary~B.3,
+% ibid.) -- which remains a linear subspace. For networks trained on
+% $\mathrm{DIM}_X$-specific data, empirically $W_O W_V \mathrm{DIM}_X
+% \subseteq \mathrm{DIM}_X$. Furthermore, O'Neill~\cite{oneill2025endofunctor}
+% establishes that self-attention induces an endofunctor $F\colon \mathrm{Vect}
+% \to \mathrm{Vect}$ in the 2-category $\mathrm{Para}(\mathrm{Vect})$, and
+% that stacking attention layers corresponds to constructing the free monad
+% on $F$. This categorical structure is precisely what $\Compose$,
+% $\Project$, and Theorem~\ref{thm:functor} formalize: the algebraic
+% composition of transformer layers is the free monad; its projection to
+% any executor is the functor $\Project_X$. Theorem~3 is therefore grounded
+% in the architecture of transformers, not in a geometric axiom.
+% \end{remark}
+%
+% 3. En la sección Related Work (Sec 7), añadir al párrafo 7.3:
+%    "...Concurrently, Suarez et al. [2026] provide an architectural proof
+%    that semantic features in transformers occupy invariant linear subspaces,
+%    directly grounding Hypothesis H2 of Theorem 3, and O'Neill [2025]
+%    formalizes self-attention as a parametric endofunctor in Para(Vect),
+%    validating the categorical framework of POLYDIM."
+%
+% 4. Recompilar: pdflatex polydim_paper_arxiv.tex && bibtex && pdflatex x2

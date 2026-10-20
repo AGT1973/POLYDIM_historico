@@ -1,0 +1,1 @@
+{"name":"buscar_clase","description":"Extrae el codigo de una clase entera de un archivo Python","parameters":{"properties":{"nombre_clase":{"title":"Nombre Clase","type":"string"},"ruta":{"title":"Ruta","type":"string"}},"required":["ruta","nombre_clase"],"title":"buscar_claseArguments","type":"object"}}

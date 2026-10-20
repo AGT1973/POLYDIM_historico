@@ -1,0 +1,1 @@
+{"name":"convertir_md_html","description":"Convierte un archivo Markdown a HTML (requiere pip install markdown)","parameters":{"properties":{"ruta_html":{"default":"","title":"Ruta Html","type":"string"},"ruta_md":{"title":"Ruta Md","type":"string"}},"required":["ruta_md"],"title":"convertir_md_htmlArguments","type":"object"}}

@@ -1,0 +1,27 @@
+{
+  "worker_id": "ai.mpat.marta@gmail.com",
+  "ticket_id": "2",
+  "metadata": {
+    "algebra": "Grupo ortogonal SO(n) / determinante",
+    "status": "FALLA_MATEMATICA",
+    "nota": "El enunciado original asume que la superposicion (suma) de transformaciones que conservan volumen tambien conserva volumen. Esto es falso. Solo la composicion (multiplicacion de matrices) lo garantiza, via det(Q1*Q2) = det(Q1)*det(Q2). No se reporta SUCCESS porque eso implicaria validar una afirmacion matematicamente incorrecta."
+  },
+  "payload_xyz": {
+    "resultado_composicion": {
+      "operacion": "Q1 @ Q2",
+      "error_promedio_vs_volumen_1": 3.715916463420399e-16,
+      "error_maximo": 1.5543122344752192e-15,
+      "conserva_volumen": true
+    },
+    "resultado_superposicion": {
+      "operacion": "Q1 + Q2",
+      "error_promedio_vs_volumen_1": 1.6362103051145755,
+      "error_maximo": 12.92019806092002,
+      "conserva_volumen": false
+    },
+    "ensayos": 1000,
+    "dimension": 4,
+    "semilla_aleatoria": 42,
+    "codigo_fuente": "tarea_numero_2.py"
+  }
+}

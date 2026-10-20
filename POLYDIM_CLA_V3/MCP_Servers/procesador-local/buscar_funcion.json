@@ -1,0 +1,1 @@
+{"name":"buscar_funcion","description":"Extrae el codigo de una funcion especifica de un archivo Python","parameters":{"properties":{"nombre_funcion":{"title":"Nombre Funcion","type":"string"},"ruta":{"title":"Ruta","type":"string"}},"required":["ruta","nombre_funcion"],"title":"buscar_funcionArguments","type":"object"}}

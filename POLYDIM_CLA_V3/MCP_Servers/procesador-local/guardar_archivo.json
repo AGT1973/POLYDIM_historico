@@ -1,0 +1,1 @@
+{"name":"guardar_archivo","description":"Guarda texto en un archivo, creando carpetas si no existen","parameters":{"properties":{"contenido":{"title":"Contenido","type":"string"},"ruta":{"title":"Ruta","type":"string"}},"required":["ruta","contenido"],"title":"guardar_archivoArguments","type":"object"}}

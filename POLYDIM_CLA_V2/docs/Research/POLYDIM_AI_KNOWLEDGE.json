@@ -1,0 +1,204 @@
+{
+  "doc_type": "ai_knowledge_base",
+  "purpose": "Contexto denso para que un agente IA entienda POLYDIM sin leer los documentos fuente completos. Optimizado para parsing, no para lectura humana.",
+  "canonical_source": "POLYDIM_CONSTITUCION_V2_CLEAN.md",
+  "conflict_resolution_rule": "En caso de contradiccion entre documentos, prevalece la Constitucion V2 (documento raiz, inmutable salvo enmienda formal).",
+  "author": {
+    "name": "Ariel H. Garcia Traba",
+    "affiliation": "Independent Researcher, Buenos Aires, Argentina",
+    "orcid": "0009-0001-2787-6067",
+    "contact": "ariel.garcia.traba@gmail.com"
+  },
+  "core_thesis": {
+    "problem": "impedance mismatch: los modelos de IA operan internamente en variedades geometricas de alta dimension (R^N, N>=10000) pero son forzados a serializar su estado a texto secuencial (tokens) para comunicarse o ser programados, perdiendo informacion en cada frontera de serializacion/deserializacion.",
+    "quantified_evidence": {
+      "hidden_state_bits": 40000,
+      "text_token_bits": 15,
+      "bandwidth_gain_factor": 2667,
+      "info_discarded_pct": 99.9,
+      "inference_speedup_factor": 24,
+      "sources": ["Interlat (Du et al. 2025, AAAI 2026)", "LatentMAS (ICML 2026 Spotlight)"]
+    },
+    "solution": "POLYDIM: lenguaje cuya unidad minima de computo no es una instruccion sino una transformacion geometrica T: R^N -> R^N. Un programa es una composicion de transformaciones sobre un vector de estado.",
+    "historical_analogy": "1950s: CPUs ya hacian aritmetica binaria pero no habia lenguaje para programarlas deliberadamente -> se invento el ensamblador. 2020s: transformers/Mamba ya operan en geometria multidimensional pero no hay lenguaje para programarla deliberadamente -> POLYDIM cierra esa brecha. POLYDIM no inventa el transformer, lo hace programable."
+  },
+  "four_primitives": {
+    "algebraic_core_architecture_independent": ["COMPOSE", "MIX", "FIXPOINT", "PROJECT"],
+    "architecture_specific_implementation": {
+      "transformers": "ATTEND",
+      "ssm_mamba": "RECUR"
+    },
+    "definitions": [
+      {
+        "name": "ATTEND",
+        "signature": "ATTEND(Q,K,V,s)",
+        "formula": "softmax(Q*K^T/sqrt(d))*V",
+        "role": "Operacion de atencion transformer expuesta como primitiva programable."
+      },
+      {
+        "name": "COMPOSE",
+        "signature": "COMPOSE(T1,T2)",
+        "formula": "T2 o T1",
+        "role": "Composicion algebraica, NO conmutativa. Reemplaza la instruccion secuencial.",
+        "theorem": "T1: asociatividad probada."
+      },
+      {
+        "name": "MIX",
+        "signature": "MIX(alpha,T1,beta,T2)",
+        "formula": "alpha*T1 + beta*T2",
+        "role": "Superposicion continua. Reemplaza el condicional if/else (gate continuo). Funciona por ortogonalidad en alta dimension.",
+        "theorem": "T2: linealidad probada."
+      },
+      {
+        "name": "FIXPOINT",
+        "signature": "FIXPOINT(T,epsilon)",
+        "formula": "itera T hasta convergencia: T^n(v)",
+        "role": "Reemplaza los loops for/while.",
+        "theorem": "T4: unicidad de puntos fijos si T es una contraccion (teorema de Banach)."
+      },
+      {
+        "name": "PROJECT",
+        "signature": "PROJECT(T, executor)",
+        "formula": "funtor covariante P: G -> E_executor",
+        "role": "El compilador de POLYDIM. Proyecta el estado geometrico a un ejecutor fisico.",
+        "executors": ["DIM_FLUTTER (widget nativo, executor humano nativo)", "DIM_RUST (codigo Rust)", "DIM_WASM (WebAssembly)", "DIM_SQL (query SQL)", "DIM_PYTHON (codigo Python)", "DIM_GRAPH", "DIM_VECTOR"],
+        "theorem": "T3: funtorialidad probada incondicionalmente para 3 contratos: COMPILE y EXPORT (via Lema de Conmutatividad de Subespacios), RENDER (via Isomorfismo Algebraico de Flutter)."
+      }
+    ]
+  },
+  "what_does_not_exist_and_replacement": [
+    {"concept_ausente": "Variables con nombre", "reemplazo": "Posiciones en R^N con identidad geometrica (GEO_ID)"},
+    {"concept_ausente": "Funciones f(x)", "reemplazo": "Transformaciones T: R^N -> R^N que se componen"},
+    {"concept_ausente": "Loop for/while", "reemplazo": "FIXPOINT: convergencia a punto fijo T^n(v)"},
+    {"concept_ausente": "Condicional if/else", "reemplazo": "MIX: gate continuo alpha*T1+(1-alpha)*T2"},
+    {"concept_ausente": "Tipo declarado", "reemplazo": "El tipo emerge de la proyeccion PROJECT (dimension de observacion)"},
+    {"concept_ausente": "Instruccion secuencial", "reemplazo": "COMPOSE: composicion algebraica T2 o T1"},
+    {"concept_ausente": "Mensaje de texto entre IAs", "reemplazo": "Transmision directa de T (protocolo ALIGN, cero serializacion)"}
+  ],
+  "data_model": {
+    "GEO_ID": "Hipervector base unico e invariante. Identidad geometrica permanente del objeto. Nunca cambia.",
+    "activaciones": "Pesos continuos en rango [0.0, 1.0] por subespacio. Mutacion = evolucion del estado geometrico, no reasignacion.",
+    "binding": "Vector de relacion en R^N. Direccion semanticamente significativa.",
+    "subespacios_nativos": ["DIM_PYTHON", "DIM_RUST", "DIM_FLUTTER", "DIM_SQL", "DIM_GRAPH", "DIM_VECTOR", "DIM_TIME", "DIM_ERROR", "DIM_META"],
+    "type_system": {
+      "regla": "El tipo emerge de la proyeccion, no se declara.",
+      "ejemplo": "PROJECT(P, DIM_SQL) -> Column(Integer); PROJECT(P, DIM_FLUTTER) -> ListView; PROJECT(P, DIM_VECTOR) -> R^3; PROJECT(P, DIM_GRAPH) -> Path(nodes). El mismo objeto tiene 4 tipos simultaneos.",
+      "interseccion_subespacios": "PROJECT(P, DIM_SQL cap DIM_FLUTTER) = tipo emergente: widget enlazado en tiempo real a datos. Se modela como pullback en la categoria G."
+    },
+    "formato_archivo_polydim": {
+      "tipo": "binario tensorial, NO texto, NO bytecode secuencial",
+      "estructura": ["HEADER (magic 0x504F4C59, version, N, n_transforms, precision_flags)", "GEO_ID (float32[N], identidad topologica invariante)", "TRANSFORMS (Wi en R^{N x r}, representacion low-rank LoRA-style: T = W0 + U*V^T, r << N)", "ACTIVATIONS (float32[K], pesos por subespacio)", "PROJECTIONS (enum[], executors objetivo)"],
+      "ejecucion": "El runtime aplica el tensor block al vector de estado local. No hay program counter.",
+      "compresion": "Denso ~400MB (N=10000, matrices NxN) -> ~2.5-20MB con LoRA segun rango r (ej r=64 -> ~2.5MB, r=256 -> ~20MB). Reduccion ~99.4%."
+    }
+  },
+  "communication_protocols": {
+    "ai_to_ai": {
+      "mecanismo": "IA_A genera T desde su estado_A y transmite T. IA_B recibe T y la aplica a su propio estado_B mediante cross-attention, obteniendo nuevo estado_B.",
+      "formula": "Communication(sB, sA) = softmax(QB * KA^T / sqrt(d)) * VA",
+      "protocolo_formal": "ALIGN: handshake basado en sondas compartidas para alinear espacios vectoriales internos heterogeneos entre modelos distintos (via Procrustes), sin perder semantica y sin pasar por texto plano.",
+      "principio": "Leer un mensaje = computar una capa de atencion. Cero serializacion."
+    },
+    "ai_to_human": {
+      "mecanismo": "PROJECT(estado, DIM_FLUTTER)",
+      "principio": "Flutter es el executor nativo del subespacio humano (no es 'la UI de POLYDIM', es la observacion humana del estado geometrico). Isomorfismo algebraico directo: Column(children:[Text,Button]) equivale a T_UI = T_col o (T_text (+) T_btn).",
+      "otros_frameworks": "React/SwiftUI/Qt son executors externos, requieren capa de adaptacion (no son isomorfismo directo)."
+    }
+  },
+  "formal_foundations": {
+    "theorems": [
+      {"id": "T1", "nombre": "Asociatividad de COMPOSE", "enunciado": "T3 o (T2 o T1) = (T3 o T2) o T1"},
+      {"id": "T2", "nombre": "Linealidad de MIX", "enunciado": "MIX preserva linealidad"},
+      {"id": "T3", "nombre": "Funtorialidad de PROJECT", "enunciado": "PROJECT es un funtor F: G -> E, probado incondicionalmente para COMPILE, EXPORT y RENDER"},
+      {"id": "T4", "nombre": "Unicidad de puntos fijos", "enunciado": "FIXPOINT converge a un unico punto fijo si T es una contraccion sobre un espacio metrico (Banach)"}
+    ],
+    "geo_id_formalization": "GEO_ID se formaliza como clase de equivalencia homotopica bajo Homotopy Type Theory (HoTT) - direccion de investigacion activa, no cerrada. Permite identidad de objeto agnostica al modelo entre sistemas de IA con espacios latentes distintos.",
+    "cognitive_programming_v2": {
+      "descripcion": "A partir de la Fase XXXII el proyecto se amplia de 'construir un lenguaje' a fundar la disciplina cientifica de la Programacion Cognitiva. POLYDIM pasa a ser el primer caso de estudio matematico de esa disciplina.",
+      "tupla_programa": "P = (S, G, T, O, C, Pi)",
+      "componentes": {
+        "S": "Estado cognitivo: representacion completa relevante para la deliberacion",
+        "G": "Goal: define una evolucion aceptable",
+        "T": "Transformacion: operador que modifica el estado (T: S -> S)",
+        "O": "Observador: funcion que interpreta el estado en un espacio de significado (O: S -> M)",
+        "C": "Constraint: condicion que debe preservarse (C(S) = true)",
+        "Pi": "Policy: regla para seleccionar la siguiente transformacion"
+      },
+      "seven_axioms": [
+        "I: todo programa posee un estado representacional",
+        "II: todo estado puede ser observado",
+        "III: toda transformacion produce otro estado valido",
+        "IV: las transformaciones son componibles",
+        "V: la ejecucion persigue goals explicitos",
+        "VI: toda ejecucion puede evaluarse contra constraints",
+        "VII: la policy Pi puede modificarse durante la ejecucion (deliberacion)"
+      ],
+      "open_problem": "Teorema de Preservacion Cognitiva: bajo que condiciones un proceso de razonamiento preserva el goal G original sin violar constraints C. Resolverlo equivale a erradicar matematicamente 'alucinacion' y 'goal drift'.",
+      "reinterpretacion_regla": "No programamos secuencias algoritmicas deterministas, disenamos procesos de razonamiento bajo restricciones y objetivos verificables (Teorema de Preservacion Cognitiva)."
+    }
+  },
+  "implementation_status": {
+    "python_bootstrap": {
+      "archivo": "polydim_runtime_v03.py",
+      "naturaleza": "andamio/simulacion, NO es el lenguaje real (regla R9)",
+      "tests": "29/29 pasando",
+      "mejora_semantica_medida": "+64.5% sobre baseline deterministico",
+      "implementado": ["GEO_ID invariante", "9 subespacios con aliases", "protocolo ALIGN", "modos MODO_S/MODO_G/MODO_H", "activaciones [0.0,1.0]"],
+      "limite": "obj.add('DIM_SQL', {...}, w=1.0) es Python simulando POLYDIM, no es sintaxis real del lenguaje"
+    },
+    "rust_vm": {
+      "archivos": ["polydim_core.rs", "polydim_fft_bind.rs"],
+      "estado": "compila y testea al 100%, FFT optimizado para binding O(N log N), sin dependencias externas, compilable a WebAssembly"
+    },
+    "modos_ejecucion": {
+      "MODO_S": "control/simbolico (texto)",
+      "MODO_G": "geometria pura (datos)",
+      "MODO_H": "hibrido: MODO_S + MODO_G, modo default"
+    },
+    "roadmap": "Hoy: Python bootstrap = API simbolica -> Proximo: VM en Rust/WASM = .polydim nativo -> Futuro: POLYDIM self-host (el lenguaje se escribe a si mismo)"
+  },
+  "governance": {
+    "documento_raiz": "Constitucion V2, inmutable salvo proceso formal de enmienda. Prevalece sobre cualquier otro documento en caso de contradiccion.",
+    "ley_de_aislamiento_sandboxing": "Los agentes experimentales (alumnos/IAs) NO deben modificar el corpus teorico (la Constitucion) directamente. Deben operar en entornos aislados (/Alumnos/).",
+    "reglas_inviolables": [
+      {"id": "R1", "regla": "La unidad fundamental es T: R^N -> R^N, nunca una instruccion"},
+      {"id": "R2", "regla": "No variables con nombre como feature nativo"},
+      {"id": "R3", "regla": "No loops secuenciales como feature nativo"},
+      {"id": "R4", "regla": "No if/else binario como feature nativo"},
+      {"id": "R5", "regla": "Los tipos emergen de la proyeccion, no se declaran"},
+      {"id": "R6", "regla": "Python, Rust y Flutter son destinos de exportacion, no la base del lenguaje"},
+      {"id": "R7", "regla": "La comunicacion IA<->IA transmite T, no texto"},
+      {"id": "R8", "regla": "Flutter es el executor nativo humano; JS y Java no pueden ocupar ese rol nativamente"},
+      {"id": "R9", "regla": "El bootstrap Python es un andamio, nunca debe presentarse como 'el lenguaje'"},
+      {"id": "R10", "regla": "GEO_ID es invariante, nunca cambia"}
+    ]
+  },
+  "glossary": {
+    "Transformacion": "T: R^N -> R^N. La unidad fundamental de computo.",
+    "Posicion": "Region en R^N de alta densidad semantica. Reemplaza la variable.",
+    "GEO_ID": "Hipervector base invariante. Identidad geometrica permanente.",
+    "Activacion": "Peso continuo [0.0,1.0] de presencia de un subespacio.",
+    "Subespacio": "Region de R^N de alta densidad semantica para un dominio.",
+    "PROJECT": "Funtor covariante P: G -> E_executor. El compilador.",
+    "Gate continuo": "alpha*T1 + (1-alpha)*T2. Reemplaza if/else.",
+    "Punto fijo": "T^n(v) hasta convergencia. Reemplaza el loop.",
+    "Executor": "Target de PROJECT: Flutter, Rust, WASM, SQL, Python.",
+    "Bootstrap": "Runtime Python V0.3. Andamio, no es el lenguaje.",
+    "ALIGN": "Protocolo de handshake para alinear espacios entre IAs distintas.",
+    "RELAY": "Documento de continuidad entre sesiones (10 secciones).",
+    "MODO_H": "Modo hibrido: MODO_S (control) + MODO_G (datos). Default."
+  },
+  "publication_context": {
+    "estado": "Preprint academico en preparacion",
+    "zenodo": "Registro abierto sin restricciones de afiliacion, DOI inmediato",
+    "popl_2027": "Deadline de envio: 9 de julio de 2026, revision doble ciega completa",
+    "arxiv": "Dificil sin afiliacion institucional o endorsement previo desde enero 2026",
+    "target_audience": ["investigadores academicos (cs.PL, cs.AI, cs.MA)", "desarrolladores de software (IR universal)", "empresas de IA (infraestructura multi-agente)", "educadores y estudiantes"]
+  },
+  "usage_instructions_for_agent": "Este documento reemplaza la lectura de los documentos fuente originales (Constitucion V10/V2 en .md/.docx/.html, papers V2/V5, kit de publicacion, presentaciones) para tareas de comprension general, generacion de codigo/ejercicios dentro de POLYDIM, o razonamiento sobre el proyecto. Si la tarea requiere una prueba matematica exacta, una cita textual verbatim, o el spec binario completo linea por linea, consultar el documento fuente especifico en Drive en vez de inferir desde aqui.",
+  "meta": {
+    "generado_por": "Claude, a pedido del propietario del proyecto, a partir de las carpetas Drive 1pYn8jFoPgTTPH0Z57bVuIZJhf4FoRuSR y 1czWYt3kk8qseDOxJdLlEeyzsn2-ai4hM",
+    "fecha_generacion": "2026-07-02",
+    "formato_elegido": "JSON - estructura jerarquica sin ambiguedad, parseable directamente por cualquier IA sin overhead de prosa, minimiza tokens de lectura frente a los .md/.docx/.html originales."
+  }
+}

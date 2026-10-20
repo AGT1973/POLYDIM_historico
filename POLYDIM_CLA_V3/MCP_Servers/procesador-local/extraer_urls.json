@@ -1,0 +1,1 @@
+{"name":"extraer_urls","description":"Extrae todas las URLs de un archivo de texto","parameters":{"properties":{"ruta":{"title":"Ruta","type":"string"}},"required":["ruta"],"title":"extraer_urlsArguments","type":"object"}}

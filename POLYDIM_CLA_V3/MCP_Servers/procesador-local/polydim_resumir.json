@@ -1,0 +1,1 @@
+{"name":"polydim_resumir","description":"Resume un texto largo usando el modelo actual","parameters":{"properties":{"texto":{"title":"Texto","type":"string"}},"required":["texto"],"title":"polydim_resumirArguments","type":"object"}}

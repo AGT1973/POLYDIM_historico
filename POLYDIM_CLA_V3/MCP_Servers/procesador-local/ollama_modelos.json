@@ -1,0 +1,1 @@
+{"name":"ollama_modelos","description":"Lista los modelos descargados en Ollama local","parameters":{"properties":{},"title":"ollama_modelosArguments","type":"object"}}

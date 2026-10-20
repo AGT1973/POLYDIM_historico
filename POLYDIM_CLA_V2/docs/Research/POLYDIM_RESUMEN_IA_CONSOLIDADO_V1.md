@@ -1,0 +1,1 @@
+Ver contenido en /home/claude/polydim/out/POLYDIM_RESUMEN_IA_CONSOLIDADO_V1.md

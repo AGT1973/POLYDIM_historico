@@ -1,38 +1,29 @@
-# POLYDIM_historico — Archivo Histórico de Versiones Previas (V2 - V9)
+# 🏛️ POLYDIM HISTÓRICO — Archivo de Evolución Arquitectónica (V2 - V9)
 
-Este repositorio contiene la consolidación histórica preservada de las versiones previas de la iniciativa de investigación independiente **POLYDIM-EINSOF**, desarrollada por **Ariel García Traba**.
-
----
-
-## 🏛️ Propósito y Estructura
-
-En cumplimiento con los principios de reproducibilidad científica y preservación de patrimonio de investigación, este repositorio alberga los hitos arquitectónicos desde sus fases tempranas hasta la consolidación de los adaptadores de variedad de Stiefel y transporte en memoria compartida (PMTP).
-
-### 📁 Directorios Históricos Incluidos:
-- **`POLYDIM_CLA_V2/`**: Versión 2.0 histórica.
-- **`POLYDIM_CLA_V3/`**: Versión 3.0 histórica.
-- **`POLYDIM_CLA_V4/`**: Versión 4.0 histórica.
-- **`POLYDIM_CLA_V5/`**: Versión 5.0 histórica.
-- **`POLYDIM_CLA_V7/`**: Versión 7.0 histórica (V6 fue una rama transitoria/privada de laboratorio).
-- **`POLYDIM_CLA_V8/`**: Versión 8.0 histórica.
-- **`POLYDIM_CLA_V9/`**: Versión 9.0 histórica (base de los adaptadores de Stiefel en Hugging Face y ensayo inicial A/B/C).
+Este repositorio contiene el **registro histórico e incremental** de las versiones preliminares, evolutivas y pedagógicas del proyecto **POLYDIM / EinsofOS**, desarrolladas por **Ariel García Traba**.
 
 ---
 
-## 🌌 Repositorio Canónico Actual
+## 📂 Índice de Versiones Archivadas
 
-Para la implementación activa de producción, kernels de silicio (C++20, Rust, CUDA, Triton), servidores MCP vectoriales y documentación formal de tesis y papers:
+| Directorio | Versión | Foco Arquitectónico y Pedagógico |
+| :--- | :--- | :--- |
+| [`POLYDIM_CLA_V2/`](./POLYDIM_CLA_V2) | **V2** | Primeros motores de alta dimensión, matrices pedagógicas iniciales y guías de cátedra. |
+| [`POLYDIM_CLA_V3/`](./POLYDIM_CLA_V3) | **V3** | Introducción de adaptadores de memoria continua y primeras pruebas en Colab. |
+| [`POLYDIM_CLA_V4/`](./POLYDIM_CLA_V4) | **V4** | Estructuración modular de tensores y puente de normalización. |
+| [`POLYDIM_CLA_V5/`](./POLYDIM_CLA_V5) | **V5** | Integración del acumulador de Neumaier preliminar y contratos de silicio. |
+| [`POLYDIM_CLA_V7/`](./POLYDIM_CLA_V7) | **V7** | Exploración del espacio de Stiefel y pruebas iniciales de relevo latente. |
+| [`POLYDIM_CLA_V8/`](./POLYDIM_CLA_V8) | **V8** | Prototipos de comunicación inter-agente y benchmarks de cancelación catastrófica. |
+| [`POLYDIM_CLA_V9/`](./POLYDIM_CLA_V9) | **V9** | Consolidación pre-EinSof, validación de 1.571 teoremas y suite de auditoría formal. |
+
+---
+
+## ⚡ Versión Oficial Activa
+
+Para la versión de producción estable, paquetes para desarrolladores, instaladores y documentación pública actualizada, dirigirse al repositorio oficial canónico:
 
 👉 **[https://github.com/AGT1973/POLYDIM_EinSof](https://github.com/AGT1973/POLYDIM_EinSof)**
 
-Para modelos estándar no-POLYDIM mediante inferencia 1D tradicional:
-👉 **[https://github.com/AGT1973/Antigravity_multyMCP](https://github.com/AGT1973/Antigravity_multyMCP)**
-
-Para el corpus teórico original y axiomas Lean 4:
-👉 **[https://github.com/AGT1973/POLYDIM-THEORICAL](https://github.com/AGT1973/POLYDIM-THEORICAL)**
-
 ---
 
-## 📜 Autoría y Atribución Soberana
-- **Iniciativa:** POLYDIM-EINSOF Research Initiative
-- **Investigador / Fundador:** Ariel García Traba (Investigador Independiente, Argentina)
+*POLYDIM Research Initiative | Ariel García Traba (Independent Research)*

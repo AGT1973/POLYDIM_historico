@@ -1,0 +1,1 @@
+{"name":"ollama_resumir","description":"Resume un texto largo con IA en estilo tecnico, simple o ejecutivo","parameters":{"properties":{"estilo":{"default":"tecnico","title":"Estilo","type":"string"},"texto":{"title":"Texto","type":"string"}},"required":["texto"],"title":"ollama_resumirArguments","type":"object"}}

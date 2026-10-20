@@ -1,0 +1,1 @@
+{"name":"leer_json","description":"Lee y valida un archivo JSON, devuelve formateado","parameters":{"properties":{"ruta":{"title":"Ruta","type":"string"}},"required":["ruta"],"title":"leer_jsonArguments","type":"object"}}

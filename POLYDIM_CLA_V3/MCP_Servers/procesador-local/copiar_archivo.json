@@ -1,0 +1,1 @@
+{"name":"copiar_archivo","description":"Copia un archivo preservando metadatos","parameters":{"properties":{"destino":{"title":"Destino","type":"string"},"origen":{"title":"Origen","type":"string"}},"required":["origen","destino"],"title":"copiar_archivoArguments","type":"object"}}

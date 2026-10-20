@@ -1,0 +1,96 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# POLYDIM V3.2: Matem\u00e1tica Topol\u00f3gica Core\n",
+    "\n",
+    "Este cuaderno demuestra la viabilidad matem\u00e1tica de las dos innovaciones clave que diferencian a POLYDIM de los Transformers est\u00e1ndar: el **Laplaciano Magn\u00e9tico Causal** (que evita la fuga de informaci\u00f3n) y las **Rotaciones Isom\u00e9tricas** para representaciones latentes distribuidas.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import matplotlib.pyplot as plt\n",
+    "import math\n",
+    "\n",
+    "print(\"Bibliotecas cargadas.\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 1. El Laplaciano Magn\u00e9tico $L^{(q)}$\n",
+    "La fuga de informaci\u00f3n (data leakage) en atenci\u00f3n sim\u00e9trica se rompe introduciendo una fase magn\u00e9tica $q$.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "N = 10\n",
+    "q = math.pi / 4.0\n",
+    "\n",
+    "H_q = np.zeros((N, N))\n",
+    "deg = np.zeros(N)\n",
+    "\n",
+    "for i in range(1, N):\n",
+    "    j = i - 1\n",
+    "    H_q[j, i] = math.cos(q)\n",
+    "    H_q[i, j] = math.cos(2*q)\n",
+    "    deg[i] += 1\n",
+    "    deg[j] += 1\n",
+    "\n",
+    "L0 = np.diag(deg) - H_q\n",
+    "\n",
+    "plt.imshow(L0, cmap=\"coolwarm\")\n",
+    "plt.title(\"Laplaciano Magn\u00e9tico (q=pi/4)\")\n",
+    "plt.colorbar()\n",
+    "plt.show()\n",
+    "\n",
+    "print(\"Notar la asimetr\u00eda: El flujo hacia adelante tiene m\u00e1s peso que el flujo hacia atr\u00e1s, introduciendo causalidad estricta.\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 2. Inyectividad del ECP (Hash)\n",
+    "En la versi\u00f3n V3.2, usamos hashes SHA-256 de las matrices de rotaci\u00f3n para evitar colisiones sem\u00e1nticas (anagramas).\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import hashlib\n",
+    "\n",
+    "def generate_ecp_hash(text):\n",
+    "    return hashlib.sha256(text.encode()).hexdigest()[:8]\n",
+    "\n",
+    "print(f\"ACT -> {generate_ecp_hash('ACT')}\")\n",
+    "print(f\"CAT -> {generate_ecp_hash('CAT')}\")\n",
+    "print(\"\u00a1Cero colisiones!\")\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}

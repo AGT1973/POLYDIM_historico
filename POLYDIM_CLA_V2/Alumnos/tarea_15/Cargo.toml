@@ -1,0 +1,20 @@
+[package]
+name = "tarea15_membership_vm"
+version = "0.1.0"
+edition = "2021"
+
+# Sin dependencias externas a propósito: el modelo solo necesita
+# aritmética de bits sobre enteros nativos.
+
+[lib]
+name = "tarea15_membership_vm"
+path = "src/main.rs"
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "tarea15_membership_vm"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = "s"
+lto = true

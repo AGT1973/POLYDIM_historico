@@ -1,0 +1,1 @@
+{"name":"tiempo_actual","description":"Devuelve la fecha y hora actual del sistema","parameters":{"properties":{},"title":"tiempo_actualArguments","type":"object"}}

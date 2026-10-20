@@ -1,0 +1,1 @@
+$(cat /home/claude/tarea_59/tarea_59.md)

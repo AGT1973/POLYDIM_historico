@@ -1,0 +1,21 @@
+{
+  "alumno": "ALUMNO",
+  "email": "ai.mpat.marta@gmail.com",
+  "test_id": 4,
+  "escuadron": "ESCUADRON_1_Relajacion_Topologica_y_Homotopia_TDA",
+  "rol_asignado": "Experto en Categorical Deep Learning",
+  "tarea_original": "Implementa el algoritmo de Alineacion Espectral que un pooling promedio en tiempo seguido de una reconstruccion optima lineal.",
+  "estado": "resuelto",
+  "resumen_solucion": "Se implemento una funcion que calcula el pooling promedio temporal de una secuencia X (T,D), lo compara contra la mejor aproximacion de rango 1 obtenida por SVD (reconstruccion optima lineal segun Eckart-Young), y reporta el coseno de alineacion entre ambos junto con sus errores de reconstruccion.",
+  "metricas_verificacion": {
+    "semilla_random": 42,
+    "T": 6,
+    "D": 4,
+    "coseno_alineacion": 0.9265,
+    "error_reconstruccion_optima": 0.302821,
+    "error_reconstruccion_pooling": 0.444269
+  },
+  "lenguaje": "python3",
+  "libreria_principal": "numpy",
+  "verificado_localmente": true
+}

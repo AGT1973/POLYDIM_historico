@@ -1,0 +1,1 @@
+{"name":"polydim_documentar","description":"Genera docstrings y comentarios profesionales para el codigo proporcionado","parameters":{"properties":{"codigo":{"title":"Codigo","type":"string"}},"required":["codigo"],"title":"polydim_documentarArguments","type":"object"}}

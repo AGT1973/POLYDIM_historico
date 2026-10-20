@@ -1,0 +1,1 @@
+{"name":"ejecutar_python","description":"Ejecuta un script Python y captura su salida (timeout 120s)","parameters":{"properties":{"args":{"default":"","title":"Args","type":"string"},"ruta_script":{"title":"Ruta Script","type":"string"}},"required":["ruta_script"],"title":"ejecutar_pythonArguments","type":"object"}}

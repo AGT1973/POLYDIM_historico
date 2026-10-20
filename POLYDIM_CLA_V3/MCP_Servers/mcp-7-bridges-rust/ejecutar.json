@@ -1,0 +1,1 @@
+{"name":"ejecutar","description":"Dispatcher local para archivos y sistema","parameters":{"properties":{"args":{"description":"JSON object string","type":"string"},"operacion":{"type":"string"}},"required":["operacion"],"type":"object"}}

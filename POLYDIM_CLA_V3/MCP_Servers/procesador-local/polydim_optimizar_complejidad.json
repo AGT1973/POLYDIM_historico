@@ -1,0 +1,1 @@
+{"name":"polydim_optimizar_complejidad","description":"Analiza la complejidad Big O y propone version optimizada","parameters":{"properties":{"codigo":{"title":"Codigo","type":"string"}},"required":["codigo"],"title":"polydim_optimizar_complejidadArguments","type":"object"}}

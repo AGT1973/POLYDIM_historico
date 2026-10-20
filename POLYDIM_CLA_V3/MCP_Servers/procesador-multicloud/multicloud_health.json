@@ -1,0 +1,1 @@
+{"name":"multicloud_health","description":"Test de conectividad rápido a cada proveedor (no consume tokens).","parameters":{"properties":{},"title":"multicloud_healthArguments","type":"object"}}

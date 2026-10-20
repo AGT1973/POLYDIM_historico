@@ -1,0 +1,1 @@
+{"name":"ollama_chat","description":"Chat estandar con el modelo Ollama (timeout 300s)","parameters":{"properties":{"mensaje":{"title":"Mensaje","type":"string"},"sistema":{"default":"","title":"Sistema","type":"string"}},"required":["mensaje"],"title":"ollama_chatArguments","type":"object"}}

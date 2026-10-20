@@ -1,0 +1,1 @@
+{"name":"ask_gemini","description":"Gemini Flash API","parameters":{"properties":{"mensaje":{"type":"string"},"sistema":{"type":"string"}},"required":["mensaje"],"type":"object"}}

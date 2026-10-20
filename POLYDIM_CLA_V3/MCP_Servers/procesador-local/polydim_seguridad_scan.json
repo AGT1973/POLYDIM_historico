@@ -1,0 +1,1 @@
+{"name":"polydim_seguridad_scan","description":"Analiza codigo buscando vulnerabilidades de seguridad","parameters":{"properties":{"codigo":{"title":"Codigo","type":"string"}},"required":["codigo"],"title":"polydim_seguridad_scanArguments","type":"object"}}

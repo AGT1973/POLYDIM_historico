@@ -1,0 +1,1 @@
+{"name":"escribir_config","description":"Guarda una clave-valor en config.json","parameters":{"properties":{"clave":{"title":"Clave","type":"string"},"valor":{"title":"Valor","type":"string"}},"required":["clave","valor"],"title":"escribir_configArguments","type":"object"}}

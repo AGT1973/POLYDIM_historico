@@ -1,0 +1,1 @@
+{"name":"ask_gemini_pro","description":"Consulta a Gemini 1.5 Pro via Google AI Studio.","parameters":{"properties":{"mensaje":{"title":"Mensaje","type":"string"},"sistema":{"default":"Eres Gemini Pro, priorizas análisis profundo.","title":"Sistema","type":"string"}},"required":["mensaje"],"title":"ask_gemini_proArguments","type":"object"}}

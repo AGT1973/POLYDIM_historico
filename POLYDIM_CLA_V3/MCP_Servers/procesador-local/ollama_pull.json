@@ -1,0 +1,1 @@
+{"name":"ollama_pull","description":"Descarga un modelo de Ollama","parameters":{"properties":{"modelo":{"title":"Modelo","type":"string"}},"required":["modelo"],"title":"ollama_pullArguments","type":"object"}}

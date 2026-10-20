@@ -1,0 +1,1 @@
+{"name":"info_sistema","description":"Informacion del sistema operativo, version de Python y directorio actual","parameters":{"properties":{},"title":"info_sistemaArguments","type":"object"}}

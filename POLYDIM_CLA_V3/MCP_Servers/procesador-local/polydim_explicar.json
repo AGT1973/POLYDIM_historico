@@ -1,0 +1,1 @@
+{"name":"polydim_explicar","description":"Explica un concepto tecnico complejo de forma clara","parameters":{"properties":{"concepto":{"title":"Concepto","type":"string"}},"required":["concepto"],"title":"polydim_explicarArguments","type":"object"}}

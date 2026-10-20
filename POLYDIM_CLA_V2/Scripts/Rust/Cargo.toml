@@ -1,0 +1,46 @@
+# POLYDIM_DEST
+# destination: polydim/core/
+# filename:    Cargo.toml
+# author:      ai.mpat.agt@gmail.com
+#
+# Resolves: TASK_024
+# Enables:  TASK_025 (cargo test), TASK_023 compilable
+
+[package]
+name        = "polydim"
+version     = "0.1.0"
+edition     = "2021"
+authors     = ["ai.mpat.agt@gmail.com"]
+description = "POLYDIM Core — VSA hyperdimensional computing in Rust"
+license     = "MIT"
+readme      = "README.md"
+
+[lib]
+name = "polydim"
+path = "polydim_core.rs"
+
+[dependencies]
+serde      = { version = "1", features = ["derive"] }
+serde_json = "1"
+rustfft = "6.1"
+num-complex = "0.4"
+base64 = "0.22"
+
+[dev-dependencies]
+# integration tests run with: cargo test
+# unit tests embedded in polydim_core.rs run with: cargo test --lib
+
+[[test]]
+name = "integration"
+path = "tests/integration.rs"
+
+[profile.release]
+opt-level = 3
+lto       = true
+
+# NOTE ON md-5 DEPENDENCY:
+# The current prototype uses FNV-1a (no external dep) for name→seed.
+# If exact Python-compatible MD5 seeding is required in future, add:
+#   md-5 = "0.10"
+# and update seed_from_name() in polydim_core.rs accordingly.
+# Cross-language compat currently relies on ALIGN + PBF0, not seed parity.

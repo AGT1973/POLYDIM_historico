@@ -1,0 +1,1 @@
+{"name":"polydim_generar_spec","description":"Genera una especificacion formal POLYDIM para una idea o requerimiento","parameters":{"properties":{"idea":{"title":"Idea","type":"string"},"nivel":{"default":"detallado","title":"Nivel","type":"string"}},"required":["idea"],"title":"polydim_generar_specArguments","type":"object"}}

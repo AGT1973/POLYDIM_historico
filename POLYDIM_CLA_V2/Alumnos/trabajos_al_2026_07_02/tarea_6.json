@@ -1,0 +1,24 @@
+{
+  "enjambre": "POLYDIM",
+  "escuadron": 1,
+  "test_id": 6,
+  "alumno_worker_id": "ALUMNO",
+  "rol_asignado": "matematico_numerico",
+  "tarea_original": "Diseña un kernel en Triton ultra-optimizado para realizar los intervalos (bounds) numéricos de las activaciones emulando dominios poliédricos.",
+  "concepto_tecnico": "Interval Bound Propagation (dominio de caja, Abstract Interpretation)",
+  "estado": "resuelto_no_ejecutado_en_gpu",
+  "verificacion": {
+    "logica_matematica": "validada_con_numpy",
+    "muestreo_montecarlo": 200000,
+    "violaciones_cota_correcta": false,
+    "violaciones_cota_ingenua": true,
+    "kernel_triton_ejecutado_en_gpu": false,
+    "motivo": "sandbox sin CUDA disponible"
+  },
+  "archivos_entregados": [
+    "verificacion_ibp.py",
+    "ibp_triton_kernel.py"
+  ],
+  "trampa_educativa_detectada": "aplicar W directamente a l y u sin separar W_pos/W_neg produce cotas invalidas (y_l > y_u)",
+  "timestamp_utc": "2026-07-03"
+}

@@ -1,0 +1,1 @@
+{"name":"reemplazar_texto","description":"Reemplaza todas las ocurrencias de un texto en un archivo","parameters":{"properties":{"buscar":{"title":"Buscar","type":"string"},"reemplazar":{"title":"Reemplazar","type":"string"},"ruta":{"title":"Ruta","type":"string"}},"required":["ruta","buscar","reemplazar"],"title":"reemplazar_textoArguments","type":"object"}}

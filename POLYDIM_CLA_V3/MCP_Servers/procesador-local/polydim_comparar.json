@@ -1,0 +1,1 @@
+{"name":"polydim_comparar","description":"Compara dos fragmentos de codigo y detalla diferencias de calidad","parameters":{"properties":{"codigo_a":{"title":"Codigo A","type":"string"},"codigo_b":{"title":"Codigo B","type":"string"}},"required":["codigo_a","codigo_b"],"title":"polydim_compararArguments","type":"object"}}

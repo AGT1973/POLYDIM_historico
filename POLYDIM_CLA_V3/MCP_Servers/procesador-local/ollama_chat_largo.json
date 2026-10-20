@@ -1,0 +1,1 @@
+{"name":"ollama_chat_largo","description":"Chat extendido para razonamiento complejo (timeout 900s)","parameters":{"properties":{"mensaje":{"title":"Mensaje","type":"string"},"sistema":{"default":"","title":"Sistema","type":"string"}},"required":["mensaje"],"title":"ollama_chat_largoArguments","type":"object"}}

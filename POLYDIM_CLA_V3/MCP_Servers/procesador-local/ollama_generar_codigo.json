@@ -1,0 +1,1 @@
+{"name":"ollama_generar_codigo","description":"Genera codigo segun una descripcion. Solo devuelve el codigo","parameters":{"properties":{"descripcion":{"title":"Descripcion","type":"string"},"lenguaje":{"default":"python","title":"Lenguaje","type":"string"}},"required":["descripcion"],"title":"ollama_generar_codigoArguments","type":"object"}}

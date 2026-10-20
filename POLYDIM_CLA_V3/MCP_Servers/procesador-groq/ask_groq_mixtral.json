@@ -1,0 +1,1 @@
+{"name":"ask_groq_mixtral","description":"Consulta a Mixtral 8x7B via Groq.","parameters":{"properties":{"mensaje":{"title":"Mensaje","type":"string"},"sistema":{"default":"Eres Mixtral, modelo experto en código.","title":"Sistema","type":"string"}},"required":["mensaje"],"title":"ask_groq_mixtralArguments","type":"object"}}

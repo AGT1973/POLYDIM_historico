@@ -1,0 +1,1 @@
+{"name":"ask_sambanova","description":"SambaNova API","parameters":{"properties":{"mensaje":{"type":"string"},"sistema":{"type":"string"}},"required":["mensaje"],"type":"object"}}

@@ -1,0 +1,1 @@
+{"name":"git_commit_push","description":"Hace add + commit + push en un solo paso","parameters":{"properties":{"directorio":{"title":"Directorio","type":"string"},"mensaje":{"title":"Mensaje","type":"string"},"rama":{"default":"main","title":"Rama","type":"string"}},"required":["directorio","mensaje"],"title":"git_commit_pushArguments","type":"object"}}

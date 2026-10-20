@@ -1,0 +1,1 @@
+{"name":"mover_archivo","description":"Mueve o renombra un archivo","parameters":{"properties":{"destino":{"title":"Destino","type":"string"},"origen":{"title":"Origen","type":"string"}},"required":["origen","destino"],"title":"mover_archivoArguments","type":"object"}}

@@ -1,0 +1,12 @@
+{
+  "_instrucciones": "Completa cada campo con tu API key del proveedor indicado. Las keys gratuitas son suficientes.",
+  "groq_api_key": "[AQUI_TU_API_KEY de https://console.groq.com/keys]",
+  "openrouter_api_key": "[AQUI_TU_API_KEY de https://openrouter.ai/workspaces/default/keys]",
+  "gemini_api_key": "[AQUI_TU_API_KEY de https://aistudio.google.com/app/apikey]",
+  "hf_token": "[AQUI_TU_API_KEY de https://huggingface.co/settings/tokens]",
+  "cerebras_api_key": "[AQUI_TU_API_KEY de https://cloud.cerebras.ai/api-keys]",
+  "sambanova_api_key": "[AQUI_TU_API_KEY de https://cloud.sambanova.ai/apis]",
+  "ollama_url": "http://localhost:11434",
+  "default_model": "deepseek-r1:7b",
+  "provider": "groq"
+}

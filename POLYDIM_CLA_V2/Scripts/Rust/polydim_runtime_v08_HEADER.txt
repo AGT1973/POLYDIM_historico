@@ -1,0 +1,5 @@
+# POLYDIM_DEST
+# destination: polydim/core/
+# filename:    polydim_runtime_v03.py
+# author:      ai.mpat.agt@gmail.com
+# version:     V0.8 — TASK_026 PBF0 integration

@@ -1,0 +1,1 @@
+{"name":"git_remotes","description":"Lista los remotos configurados en el repositorio","parameters":{"properties":{"directorio":{"title":"Directorio","type":"string"}},"required":["directorio"],"title":"git_remotesArguments","type":"object"}}

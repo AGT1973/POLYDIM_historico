@@ -1,0 +1,1 @@
+{"name":"buscar_todo","description":"Encuentra comentarios TODO, FIXME y HACK en archivos Python de un directorio","parameters":{"properties":{"directorio":{"title":"Directorio","type":"string"}},"required":["directorio"],"title":"buscar_todoArguments","type":"object"}}

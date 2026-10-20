@@ -1,0 +1,1 @@
+{"name":"polydim_analizar_proyecto","description":"Analiza la arquitectura de un proyecto y sugiere mejoras","parameters":{"properties":{"directorio":{"title":"Directorio","type":"string"}},"required":["directorio"],"title":"polydim_analizar_proyectoArguments","type":"object"}}

@@ -1,0 +1,1 @@
+{"name":"ask_hf","description":"HuggingFace API","parameters":{"properties":{"mensaje":{"type":"string"},"modelo":{"type":"string"},"sistema":{"type":"string"}},"required":["mensaje"],"type":"object"}}

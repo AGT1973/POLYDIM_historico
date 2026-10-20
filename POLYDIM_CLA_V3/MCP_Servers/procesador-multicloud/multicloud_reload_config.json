@@ -1,0 +1,1 @@
+{"name":"multicloud_reload_config","description":"Recarga config.json sin reiniciar el servidor (útil si se agrega una API key nueva).","parameters":{"properties":{},"title":"multicloud_reload_configArguments","type":"object"}}

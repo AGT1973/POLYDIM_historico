@@ -1,0 +1,1 @@
+{"name":"hash_archivo","description":"Genera hash MD5 y SHA256 de un archivo","parameters":{"properties":{"ruta":{"title":"Ruta","type":"string"}},"required":["ruta"],"title":"hash_archivoArguments","type":"object"}}

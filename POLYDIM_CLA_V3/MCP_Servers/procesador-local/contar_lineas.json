@@ -1,0 +1,1 @@
+{"name":"contar_lineas","description":"Cuenta lineas, palabras, comentarios y bytes de un archivo","parameters":{"properties":{"ruta":{"title":"Ruta","type":"string"}},"required":["ruta"],"title":"contar_lineasArguments","type":"object"}}

@@ -1,0 +1,1 @@
+{"name":"polydim_generar_tests","description":"Genera tests unitarios pytest para un codigo dado","parameters":{"properties":{"codigo":{"title":"Codigo","type":"string"}},"required":["codigo"],"title":"polydim_generar_testsArguments","type":"object"}}

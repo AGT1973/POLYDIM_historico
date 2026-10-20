@@ -1,0 +1,1 @@
+{"name":"leer_pdf","description":"Extrae texto de un PDF (requiere pypdf)","parameters":{"properties":{"paginas_max":{"default":20,"title":"Paginas Max","type":"integer"},"ruta":{"title":"Ruta","type":"string"}},"required":["ruta"],"title":"leer_pdfArguments","type":"object"}}

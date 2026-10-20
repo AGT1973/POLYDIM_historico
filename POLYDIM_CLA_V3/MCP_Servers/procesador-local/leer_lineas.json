@@ -1,0 +1,1 @@
+{"name":"leer_lineas","description":"Lee un rango especifico de lineas de un archivo (inicio y fin son 1-indexed)","parameters":{"properties":{"fin":{"default":50,"title":"Fin","type":"integer"},"inicio":{"default":1,"title":"Inicio","type":"integer"},"ruta":{"title":"Ruta","type":"string"}},"required":["ruta"],"title":"leer_lineasArguments","type":"object"}}

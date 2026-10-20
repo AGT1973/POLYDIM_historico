@@ -1,0 +1,7 @@
+ATENCIÓN: ENTORNO MIGRADO
+
+Este proyecto ha sido migrado a un entorno local de alta velocidad para evitar bloqueos de I/O por parte de Google Drive durante las operaciones con sub-agentes y scripts de Python masivos.
+
+NUEVA RUTA ACTIVA: D:\_______ia_local\Antigravity\POLYDIM_v1_1_Activo
+
+Por favor, no realices modificaciones en esta carpeta de G: para evitar desincronizaciones de código. Todo el trabajo futuro de Antigravity ocurrirá en el disco D:.

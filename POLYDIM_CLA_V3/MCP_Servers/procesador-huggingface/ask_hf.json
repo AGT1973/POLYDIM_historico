@@ -1,0 +1,1 @@
+{"name":"ask_hf","description":"Consulta via HuggingFace Inference API.","parameters":{"properties":{"mensaje":{"title":"Mensaje","type":"string"},"modelo":{"default":"","title":"Modelo","type":"string"},"sistema":{"default":"Eres un asistente basado en modelos open-source.","title":"Sistema","type":"string"}},"required":["mensaje"],"title":"ask_hfArguments","type":"object"}}

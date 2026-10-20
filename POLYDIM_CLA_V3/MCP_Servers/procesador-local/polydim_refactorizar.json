@@ -1,0 +1,1 @@
+{"name":"polydim_refactorizar","description":"Refactoriza codigo POLYDIM manteniendo su comportamiento","parameters":{"properties":{"codigo":{"title":"Codigo","type":"string"},"objetivo":{"default":"legibilidad","title":"Objetivo","type":"string"}},"required":["codigo"],"title":"polydim_refactorizarArguments","type":"object"}}

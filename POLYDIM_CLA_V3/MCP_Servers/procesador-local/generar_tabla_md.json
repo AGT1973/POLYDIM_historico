@@ -1,0 +1,1 @@
+{"name":"generar_tabla_md","description":"Convierte un JSON array de objetos a tabla Markdown. datos = '[{...}, ...]'","parameters":{"properties":{"datos":{"title":"Datos","type":"string"}},"required":["datos"],"title":"generar_tabla_mdArguments","type":"object"}}

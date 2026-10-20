@@ -1,0 +1,1 @@
+{"name":"ejecutar_cmd","description":"Ejecuta un comando de sistema y devuelve stdout/stderr (timeout 60s)","parameters":{"properties":{"comando":{"title":"Comando","type":"string"},"directorio":{"default":".","title":"Directorio","type":"string"}},"required":["comando"],"title":"ejecutar_cmdArguments","type":"object"}}

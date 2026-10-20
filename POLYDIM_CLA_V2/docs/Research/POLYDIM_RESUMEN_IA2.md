@@ -1,0 +1,1 @@
+$(cat /home/claude/POLYDIM_RESUMEN_IA.md)

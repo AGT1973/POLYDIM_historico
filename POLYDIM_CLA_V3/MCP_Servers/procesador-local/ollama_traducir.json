@@ -1,0 +1,1 @@
+{"name":"ollama_traducir","description":"Traduce un texto con IA al idioma indicado","parameters":{"properties":{"idioma_destino":{"default":"ingles","title":"Idioma Destino","type":"string"},"texto":{"title":"Texto","type":"string"}},"required":["texto"],"title":"ollama_traducirArguments","type":"object"}}

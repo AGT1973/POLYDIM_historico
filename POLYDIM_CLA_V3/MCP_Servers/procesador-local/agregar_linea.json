@@ -1,0 +1,1 @@
+{"name":"agregar_linea","description":"Agrega una linea al final de un archivo","parameters":{"properties":{"ruta":{"title":"Ruta","type":"string"},"texto":{"title":"Texto","type":"string"}},"required":["ruta","texto"],"title":"agregar_lineaArguments","type":"object"}}

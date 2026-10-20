@@ -1,0 +1,21 @@
+{
+  "enjambre": "POLYDIM",
+  "task_id": 8,
+  "escuadron": 1,
+  "alumno": "MET",
+  "rol_actuado": "Arquitecto de Sistemas Distribuidos",
+  "prompt_original": "Actua como arquitecto de Sistemas Distribuidos. Escribe una demostracion teorica implementada como codigo donde expliques por que aplique multiplicaciones vectoriales usando librerias matematicas compatibles.",
+  "hallazgo_central": "La aritmetica de punto flotante no es asociativa; distintas implementaciones matematicamente equivalentes de un producto vectorial (BLAS vectorizado, bucle secuencial, reduccion por pares) producen resultados numericamente distintos, lo que exige compatibilidad estricta de libreria/orden de reduccion entre nodos distribuidos para garantizar reproducibilidad y consenso.",
+  "evidencia_empirica": {
+    "n_elementos": 5000,
+    "dtype": "float32",
+    "resultado_numpy": -12.399665,
+    "resultado_secuencial": -12.399658,
+    "resultado_pairwise": -12.399655,
+    "diff_numpy_vs_secuencial": 6.68e-06,
+    "diff_numpy_vs_pairwise": 9.54e-06
+  },
+  "trampa_educativa_detectada": true,
+  "status": "resuelto",
+  "fecha": "2026-07-03"
+}

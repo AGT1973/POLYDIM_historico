@@ -1,0 +1,1 @@
+{"name":"leer_docx","description":"Extrae texto de un archivo Word .docx (requiere python-docx)","parameters":{"properties":{"ruta":{"title":"Ruta","type":"string"}},"required":["ruta"],"title":"leer_docxArguments","type":"object"}}

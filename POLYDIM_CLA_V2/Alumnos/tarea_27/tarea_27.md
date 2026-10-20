@@ -1,0 +1,1 @@
+{{FILE:/home/claude/tarea_27/tarea_27.md}}

@@ -1,0 +1,1 @@
+{"name":"leer_config","description":"Lee el archivo config.json si existe","parameters":{"properties":{},"title":"leer_configArguments","type":"object"}}

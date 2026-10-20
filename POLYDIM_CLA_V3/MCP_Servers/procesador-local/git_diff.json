@@ -1,0 +1,1 @@
+{"name":"git_diff","description":"Muestra las diferencias no commiteadas. Si se pasa archivo, solo ese archivo","parameters":{"properties":{"archivo":{"default":"","title":"Archivo","type":"string"},"directorio":{"title":"Directorio","type":"string"}},"required":["directorio"],"title":"git_diffArguments","type":"object"}}

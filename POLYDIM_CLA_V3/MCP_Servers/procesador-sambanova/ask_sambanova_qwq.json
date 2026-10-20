@@ -1,0 +1,1 @@
+{"name":"ask_sambanova_qwq","description":"Consulta a QwQ-32B via SambaNova.","parameters":{"properties":{"mensaje":{"title":"Mensaje","type":"string"},"sistema":{"default":"Eres QwQ, modelo matemático.","title":"Sistema","type":"string"}},"required":["mensaje"],"title":"ask_sambanova_qwqArguments","type":"object"}}

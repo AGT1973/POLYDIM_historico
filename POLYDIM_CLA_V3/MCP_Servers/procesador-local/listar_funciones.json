@@ -1,0 +1,1 @@
+{"name":"listar_funciones","description":"Lista todas las funciones definidas en un archivo Python con su numero de linea","parameters":{"properties":{"ruta":{"title":"Ruta","type":"string"}},"required":["ruta"],"title":"listar_funcionesArguments","type":"object"}}

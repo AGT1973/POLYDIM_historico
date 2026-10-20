@@ -1,0 +1,1 @@
+{"name":"polydim_doc_gen","description":"Genera documentacion tecnica completa (docstrings + README) para el codigo","parameters":{"properties":{"codigo":{"title":"Codigo","type":"string"}},"required":["codigo"],"title":"polydim_doc_genArguments","type":"object"}}

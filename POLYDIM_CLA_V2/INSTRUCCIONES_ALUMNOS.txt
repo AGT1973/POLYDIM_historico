@@ -1,0 +1,22 @@
+🚀 INSTRUCCIONES PARA EL ENJAMBRE POLYDIM (MÁSTER A ALUMNOS) 🚀
+
+(Copia y pega el siguiente mensaje a tus 36 alumnos por WhatsApp, Discord o Email)
+
+--------------------------------------------------------------------------------------
+¡Hola a todos! Arrancamos la fase de Validación Empírica del compilador POLYDIM.
+
+A partir de hoy, ya no usarán prompts largos. Toda la lógica y reglas matemáticas de POLYDIM están subidas en el servidor central. Para trabajar, solo tienen que abrir su IA asignada (Claude 3.5, GPT-4o, Gemini 1.5 Pro, Qwen, etc.) y pegar un único comando que hará que su IA descargue automáticamente las reglas desde la web.
+
+Cada uno de ustedes tiene asignado un número del 1 al 36.
+
+👉 **ESTO ES LO ÚNICO QUE TIENEN QUE PEGAR EN SU IA:**
+
+"Eres un Agente del Enjambre POLYDIM. Inicia leyendo tu rol, las reglas matemáticas y la lista de tareas directamente desde este enlace RAW de Github: 
+https://raw.githubusercontent.com/AGT1973/POLYDIM/main/github_pages_swarm/swarm_context.txt
+
+Tu único objetivo es leer la Tarea #[TU_NUMERO], ejecutarla estrictamente en código (PyTorch/JAX/SMT), y devolverme el resultado en el formato JSON XYZ."
+
+**(Nota: Reemplacen [TU_NUMERO] por el número que les tocó).**
+
+Una vez que la IA les devuelva el código en el bloque JSON, guárdenlo con el nombre "RESULTADO_TICKET_[SU_NUMERO].json" y súbanlo a la carpeta INBOX de Google Drive.
+--------------------------------------------------------------------------------------

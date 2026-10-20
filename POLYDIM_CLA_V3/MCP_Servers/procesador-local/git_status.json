@@ -1,0 +1,1 @@
+{"name":"git_status","description":"Estado del repositorio git: rama, cambios y ultimos 5 commits","parameters":{"properties":{"directorio":{"title":"Directorio","type":"string"}},"required":["directorio"],"title":"git_statusArguments","type":"object"}}

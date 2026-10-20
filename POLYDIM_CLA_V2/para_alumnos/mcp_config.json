@@ -1,0 +1,47 @@
+{
+  "mcpServers": {
+    "procesador-local": {
+      "command": "C:/Python312/python.exe",
+      "_NOTA": "Cambia la ruta de python y del script a las tuyas",
+      "args": [
+        "-W",
+        "ignore",
+        "-u",
+        "./mcp_servers/server_mcp_ollama_antigravity_7.py"
+      ],
+      "env": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONWARNINGS": "ignore"
+      }
+    },
+    "procesador-openrouter": {
+      "command": "C:/Python312/python.exe",
+      "args": [
+        "-W",
+        "ignore",
+        "-u",
+        "./mcp_servers/server_mcp_openrouter_antigravity.py"
+      ],
+      "env": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONWARNINGS": "ignore"
+      }
+    },
+    "procesador-multicloud": {
+      "command": "C:/Python312/python.exe",
+      "args": [
+        "-W",
+        "ignore",
+        "-u",
+        "./mcp_servers/server_mcp_multicloud_antigravity.py"
+      ],
+      "env": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONWARNINGS": "ignore"
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+# ==============================================================================
+# POLYDIM EINSOF - .gitignore (Rule 14: Anti-Leak Protocol & Zero-Waste)
+# ==============================================================================
+
+# Credentials, Keys & Secrets (Rule 14 strictly forbidden)
+.env
+.env.*
+*.env
+api_keys_pool.json
+permanent_memory.sqlite
+update_kimi_keys.py
+matrix_state/
+*.pem
+*.key
+*.p12
+
+# Database Backups & Dumps containing active keys or raw states
+BACKUP_STAGE_*/
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+
+# Ephemeral Scripts with Database Passwords or Admin Connections
+register_*.py
+dump_permanent_accounts.py
+find_all_accounts.py
+get_accounts_exact.py
+test_all_keys_pg.py
+
+# Historical & Diagnostic Backups
+_HISTORICO/
+_AGY_BACKUP/
+
+# Logs & Telemetry
+*.log
+*.csv.log
+*.out
+
+# Python cache & packaging
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Dart / Flutter artifacts
+.dart_tool/
+.packages
+pubspec.lock.old
+
+# Native binaries & temporary build objects (outside frozen delivery packages)
+*.exe
+*.pdb
+*.obj
+*.o
+*.ilk
+test_fixed_rust.rs
+test_subnormal_rust.rs
+e25_kulisch_exact_integer_harness.*
+
+# OS files
+.DS_Store
+Thumbs.db

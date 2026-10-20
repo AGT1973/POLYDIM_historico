@@ -1,0 +1,1 @@
+{"name":"ollama_corregir_gramatica","description":"Corrige gramatica y ortografia con IA. Solo devuelve el texto corregido","parameters":{"properties":{"idioma":{"default":"espanol","title":"Idioma","type":"string"},"texto":{"title":"Texto","type":"string"}},"required":["texto"],"title":"ollama_corregir_gramaticaArguments","type":"object"}}

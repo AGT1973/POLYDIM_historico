@@ -1,0 +1,1 @@
+{"name":"tamano_directorio","description":"Calcula el tamano total en MB y cantidad de archivos de un directorio","parameters":{"properties":{"directorio":{"title":"Directorio","type":"string"}},"required":["directorio"],"title":"tamano_directorioArguments","type":"object"}}

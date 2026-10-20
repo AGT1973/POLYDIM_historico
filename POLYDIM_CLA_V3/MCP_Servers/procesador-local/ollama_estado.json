@@ -1,0 +1,1 @@
+{"name":"ollama_estado","description":"Verifica si Ollama esta respondiendo en localhost:11434","parameters":{"properties":{},"title":"ollama_estadoArguments","type":"object"}}

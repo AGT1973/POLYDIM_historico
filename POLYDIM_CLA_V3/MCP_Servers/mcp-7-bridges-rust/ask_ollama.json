@@ -1,0 +1,1 @@
+{"name":"ask_ollama","description":"Ollama Local","parameters":{"properties":{"mensaje":{"type":"string"},"sistema":{"type":"string"}},"required":["mensaje"],"type":"object"}}

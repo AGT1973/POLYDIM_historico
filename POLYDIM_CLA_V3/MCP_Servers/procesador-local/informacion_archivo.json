@@ -1,0 +1,1 @@
+{"name":"informacion_archivo","description":"Devuelve tamano, fecha de creacion y ultima modificacion del archivo","parameters":{"properties":{"ruta":{"title":"Ruta","type":"string"}},"required":["ruta"],"title":"informacion_archivoArguments","type":"object"}}

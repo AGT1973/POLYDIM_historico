@@ -1,0 +1,1 @@
+{"name":"polydim_generar_abstract","description":"Genera un abstract academico en ingles para una descripcion de POLYDIM","parameters":{"properties":{"descripcion":{"title":"Descripcion","type":"string"},"palabras":{"default":150,"title":"Palabras","type":"integer"}},"required":["descripcion"],"title":"polydim_generar_abstractArguments","type":"object"}}

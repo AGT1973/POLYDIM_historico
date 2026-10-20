@@ -1,0 +1,1 @@
+{"name":"listar_directorio","description":"Muestra el arbol de archivos y carpetas hasta una profundidad indicada","parameters":{"properties":{"directorio":{"title":"Directorio","type":"string"},"profundidad":{"default":2,"title":"Profundidad","type":"integer"}},"required":["directorio"],"title":"listar_directorioArguments","type":"object"}}

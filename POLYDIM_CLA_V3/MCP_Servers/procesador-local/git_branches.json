@@ -1,0 +1,1 @@
+{"name":"git_branches","description":"Lista todas las ramas locales y remotas del repositorio","parameters":{"properties":{"directorio":{"title":"Directorio","type":"string"}},"required":["directorio"],"title":"git_branchesArguments","type":"object"}}

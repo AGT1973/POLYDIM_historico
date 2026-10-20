@@ -1,0 +1,26 @@
+{
+  "worker_id": "ALUMNO",
+  "tarea_id": 5,
+  "rol_experto": "PEFT (Parameter-Efficient Fine-Tuning)",
+  "interpretacion_enunciado": "Familia de adaptadores LoRA de bajo rango cuyas actualizaciones de peso conmutan por construccion mediante una base propia compartida U, con verificacion en tres niveles: algebraico estatico, dinamico via flujos de Lie (matrix_exp), y categorico via diagrama conmutativo",
+  "supuestos_declarados": [
+    "Matrices de peso cuadradas (d_in == d_out)",
+    "Base compartida U fija y no entrenable",
+    "Rango bajo r logrado enmascarando entradas diagonales"
+  ],
+  "verificaciones": {
+    "estatica_commutador": "PASSED",
+    "flujo_lie_matrix_exp": "PASSED",
+    "diagrama_categorico": "PASSED",
+    "caso_limite_rango_cero": "PASSED",
+    "caso_limite_rango_completo": "PASSED",
+    "control_negativo_bases_distintas": "PASSED",
+    "gradientes_preservan_conmutacion": "PASSED",
+    "verificacion_simbolica_sympy": "PASSED"
+  },
+  "tests_totales": 7,
+  "tests_pasados": 7,
+  "archivos_entregados": ["commuting_lora.py", "test_commuting_lora.py"],
+  "tipo_de_asistencia": "generativa_no_agentica",
+  "fecha": "2026-07-03"
+}
